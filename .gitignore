@@ -21,6 +21,10 @@
 # Ignore testing related files
 /sites/simpletest
 
+# Ignore modules and libraries controlled by Composer
+/modules/contrib/*
+/libraries/*
+
 # Ignore drupal core (if not versioning drupal sources)
 /core
 /modules/README.txt
@@ -35,13 +39,12 @@
 /.editorconfig
 /.eslintignore
 /.eslintrc.json
-/.gitattributes
 /.htaccess
+/.ht.router.php
 /autoload.php
-/composer.json
-/composer.lock
 /example.gitignore
 /index.php
+/INSTALL.txt
 /LICENSE.txt
 /README.txt
 /robots.txt
