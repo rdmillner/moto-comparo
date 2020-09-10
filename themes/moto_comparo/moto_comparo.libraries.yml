@@ -4,21 +4,21 @@ global:
     js/moto-comparo.js: {}
   css:
     base:
-      css/base/elements.css: {}
+      css/elements.min.css: {}
     component:
-      css/components/block.css: {}
-      css/components/breadcrumb.css: {}
-      css/components/field.css: {}
-      css/components/form.css: {}
-      css/components/header.css: {}
-      css/components/menu.css: {}
-      css/components/messages.css: {}
-      css/components/node.css: {}
-      css/components/sidebar.css: {}
-      css/components/table.css: {}
-      css/components/tabs.css: {}
-      css/components/buttons.css: {}
+      css/block.min.css: {}
+      css/breadcrumb.min.css: {}
+      css/field.min.css: {}
+      css/form.min.css: {}
+      css/header.min.css: {}
+      css/menu.min.css: {}
+      css/messages.min.css: {}
+      css/node.min.css: {}
+      css/sidebar.min.css: {}
+      css/table.min.css: {}
+      css/tabs.min.css: {}
+      css/buttons.min.css: {}
     layout:
-      css/layouts/layout.css: {}
+      css/layout.min.css: {}
     theme:
-      css/theme/print.css: { media: print }
+      css/print.min.css: { media: print }
