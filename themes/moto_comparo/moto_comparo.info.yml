@@ -1,6 +1,6 @@
 name: Moto Comparo
 type: theme
-base theme: stark
+base theme: bartik
 description: A flexible theme with a responsive, mobile-first layout.
 package: Custom
 core: 8.x
