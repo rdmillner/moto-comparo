@@ -1,0 +1,55 @@
+label{
+  display:block !important;
+}
+.slide__description{
+  text-align: center;
+  font-size: .8em;
+}
+.slick-arrow::before{
+  color:#000;
+}
+/* BEGIN motorcycle teaser */
+.mc-teaser{
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  .teaser-specs{
+    flex-basis: 27%;
+    width:27%;
+    align-self: flex-start;
+    text-align: center;
+    >div{
+      padding-bottom: 10px;
+    }
+  }
+  & .slick--field-pictures--teaser{
+    width: 72%
+  }
+}
+/* END motorcycle teaser */
+/* BEGIN motorcycle teaser view */
+.motorcycle-teaser.views-row{
+  margin: 15px auto;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+  max-width: 700px;
+  h2{
+    text-align: center;
+    a{
+      text-decoration: none;
+      //background-color: yellow;
+      color: black;
+      width: 100%;
+      //border: 1px solid black;
+      border-radius: 30px;
+      span{
+        padding: 5px 25px;
+
+      }
+    }
+  }
+  :last{
+    border-bottom: unset;
+  }
+}
+/* END motorcycle teaser view */
