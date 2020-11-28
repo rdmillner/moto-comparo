@@ -1,0 +1,339 @@
+From e1996f12b03a845553b63a13fd113cb3af2b936e Mon Sep 17 00:00:00 2001
+From: Ryan Millner <rdmillner@gmail.com>
+Date: Sat, 28 Nov 2020 07:49:51 -0500
+Subject: [PATCH 1/3] Update VolumeUnit.php
+
+Changing volume units for cubic inch and cubic centimeter to cu and cc respectively because they are more familiar to future readers
+---
+ src/VolumeUnit.php | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/src/VolumeUnit.php b/src/VolumeUnit.php
+index a09560d..dea1665 100644
+--- a/src/VolumeUnit.php
++++ b/src/VolumeUnit.php
+@@ -12,9 +12,9 @@ final class VolumeUnit implements UnitInterface {
+   const DECILITER = 'dl';
+   const LITER = 'l';
+   const CUBIC_MILLIMETER = 'mm3';
+-  const CUBIC_CENTIMETER = 'cm3';
++  const CUBIC_CENTIMETER = 'cc';
+   const CUBIC_METER = 'm3';
+-  const CUBIC_INCH = 'in3';
++  const CUBIC_INCH = 'cu';
+   const CUBIC_FOOT = 'ft3';
+   const FLUID_OUNCE = 'fl oz';
+   const US_GALLON = 'gal';
+@@ -29,9 +29,9 @@ final class VolumeUnit implements UnitInterface {
+       self::DECILITER => t('dl'),
+       self::LITER => t('l'),
+       self::CUBIC_MILLIMETER => t('mm³'),
+-      self::CUBIC_CENTIMETER => t('cm³'),
++      self::CUBIC_CENTIMETER => t('cc'),
+       self::CUBIC_METER => t('m³'),
+-      self::CUBIC_INCH => t('in³'),
++      self::CUBIC_INCH => t('cu'),
+       self::CUBIC_FOOT => t('ft³'),
+       self::FLUID_OUNCE => t('fl oz'),
+       self::US_GALLON => t('gal'),
+-- 
+2.28.0.windows.1
+
+
+From e00e796781cc374d909eb4dfc5e33bb320f228c4 Mon Sep 17 00:00:00 2001
+From: Ryan Millner <rdmillner@gmail.com>
+Date: Sat, 28 Nov 2020 07:55:44 -0500
+Subject: [PATCH 2/3] Changing the rest of the centimeter and inch volume units
+
+Missed a couple of instances of the previous volume changes due to an improper search.
+---
+ tests/src/Unit/AreaTest.php   | 2 +-
+ tests/src/Unit/VolumeTest.php | 4 ++--
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/tests/src/Unit/AreaTest.php b/tests/src/Unit/AreaTest.php
+index b209791..c562b48 100644
+--- a/tests/src/Unit/AreaTest.php
++++ b/tests/src/Unit/AreaTest.php
+@@ -34,7 +34,7 @@ class AreaTest extends UnitTestCase {
+    */
+   public function testInvalidUnit() {
+     $this->expectException(\InvalidArgumentException::class);
+-    $area = new Area('2', 'cm3');
++    $area = new Area('2', 'cc');
+   }
+ 
+   /**
+diff --git a/tests/src/Unit/VolumeTest.php b/tests/src/Unit/VolumeTest.php
+index a0e0988..5e1db3f 100644
+--- a/tests/src/Unit/VolumeTest.php
++++ b/tests/src/Unit/VolumeTest.php
+@@ -48,8 +48,8 @@ class VolumeTest extends UnitTestCase {
+     $this->assertEquals(new Volume('40000', 'dl'), $this->volume->convert('dl')->round());
+     $this->assertEquals(new Volume('4000', 'l'), $this->volume->convert('l')->round());
+     $this->assertEquals(new Volume('4000000000', 'mm3'), $this->volume->convert('mm3')->round());
+-    $this->assertEquals(new Volume('4000000', 'cm3'), $this->volume->convert('cm3')->round());
+-    $this->assertEquals(new Volume('244095', 'in3'), $this->volume->convert('in3')->round());
++    $this->assertEquals(new Volume('4000000', 'cc'), $this->volume->convert('cc')->round());
++    $this->assertEquals(new Volume('244095', 'cu'), $this->volume->convert('cu')->round());
+     $this->assertEquals(new Volume('141.259', 'ft3'), $this->volume->convert('ft3')->round(3));
+     $this->assertEquals(new Volume('135256', 'fl oz'), $this->volume->convert('fl oz')->round());
+     $this->assertEquals(new Volume('1056.69', 'gal'), $this->volume->convert('gal')->round(2));
+-- 
+2.28.0.windows.1
+
+
+From 75b1922826e77fa4059b39d6344f334629003bfc Mon Sep 17 00:00:00 2001
+From: Ryan Millner <rdmillner@gmail.com>
+Date: Sat, 28 Nov 2020 10:41:48 -0500
+Subject: [PATCH 3/3] First attempt at units for Torque and Power
+
+Attempting to create units for torque (Nm and ft-lb) and power (kw and hp)
+---
+ src/MeasurementType.php | 10 +++++++-
+ src/Power.php           | 25 +++++++++++++++++++
+ src/PowerUnit.php       | 55 +++++++++++++++++++++++++++++++++++++++++
+ src/Torque.php          | 25 +++++++++++++++++++
+ src/TorqueUnit.php      | 55 +++++++++++++++++++++++++++++++++++++++++
+ 5 files changed, 169 insertions(+), 1 deletion(-)
+ create mode 100644 src/Power.php
+ create mode 100644 src/PowerUnit.php
+ create mode 100644 src/Torque.php
+ create mode 100644 src/TorqueUnit.php
+
+diff --git a/src/MeasurementType.php b/src/MeasurementType.php
+index d068cba..f2d466b 100644
+--- a/src/MeasurementType.php
++++ b/src/MeasurementType.php
+@@ -12,6 +12,8 @@ final class MeasurementType {
+   const TEMPERATURE = 'temperature';
+   const VOLUME = 'volume';
+   const WEIGHT = 'weight';
++  const POWER = 'power';
++  const TORQUE = 'torque';
+ 
+   /**
+    * Gets the labels for the defined measurement types.
+@@ -26,6 +28,8 @@ final class MeasurementType {
+       self::TEMPERATURE => t('Temperature'),
+       self::VOLUME => t('Volume'),
+       self::WEIGHT => t('Weight'),
++      self::POWER => t('Power'),
++      self::TORQUE => t('Torque'),
+     ];
+   }
+ 
+@@ -46,6 +50,8 @@ final class MeasurementType {
+       self::TEMPERATURE => Temperature::class,
+       self::VOLUME => Volume::class,
+       self::WEIGHT => Weight::class,
++      self::POWER => Power::class,
++      self::TORQUE => Torque::class,
+     ];
+ 
+     return $classes[$type];
+@@ -68,6 +74,8 @@ final class MeasurementType {
+       self::TEMPERATURE => TemperatureUnit::class,
+       self::VOLUME => VolumeUnit::class,
+       self::WEIGHT => WeightUnit::class,
++      self::POWER => PowerUnit::class,
++      self::TORQUE => TorqueUnit::class,
+     ];
+ 
+     return $classes[$type];
+@@ -83,7 +91,7 @@ final class MeasurementType {
+    */
+   public static function assertExists($type) {
+     $allowed_types = [
+-      self::AREA, self::LENGTH, self::TEMPERATURE, self::VOLUME, self::WEIGHT,
++      self::AREA, self::LENGTH, self::TEMPERATURE, self::VOLUME, self::WEIGHT, self::POWER,
+     ];
+     if (!in_array($type, $allowed_types)) {
+       throw new \InvalidArgumentException(sprintf('Invalid measurement type "%s" provided.', $type));
+diff --git a/src/Power.php b/src/Power.php
+new file mode 100644
+index 0000000..8dee45f
+--- /dev/null
++++ b/src/Power.php
+@@ -0,0 +1,25 @@
++<?php
++
++namespace Drupal\physical;
++
++/**
++ * Provides a value object for weight amounts.
++ *
++ * Technically this is mass, not weight, but we prioritized user expectations
++ * over correctness.
++ *
++ * Usage example:
++ * @code
++ *   $power = new Power('100', PowertUnit::KILOWATT);
++ * @endcode
++ */
++final class Power extends Measurement {
++
++  /**
++   * The measurement type.
++   *
++   * @var string
++   */
++  protected $type = MeasurementType::POWER;
++
++}
+diff --git a/src/PowerUnit.php b/src/PowerUnit.php
+new file mode 100644
+index 0000000..288cd83
+--- /dev/null
++++ b/src/PowerUnit.php
+@@ -0,0 +1,55 @@
++<?php
++
++namespace Drupal\physical;
++
++/**
++ * Provides power units.
++ */
++final class PowerUnit implements UnitInterface {
++
++  const KILOWATT = 'kw';
++  const HORSEPOWER = 'hp';
++
++  /**
++   * {@inheritdoc}
++   */
++  public static function getLabels() {
++    return [
++      self::KILOWATT => t('kw'),
++      self::HORSEPOWER => t('hp'),
++    ];
++  }
++
++  /**
++   * {@inheritdoc}
++   */
++  public static function getBaseUnit() {
++    return self::KILOWATT;
++  }
++
++  /**
++   * {@inheritdoc}
++   */
++  public static function getBaseFactor($unit) {
++    self::assertExists($unit);
++    $factors = [
++      self::KILOWATT => '1',
++      self::HORSEPOWER => '0.74569987',
++    ];
++
++    return $factors[$unit];
++  }
++
++  /**
++   * {@inheritdoc}
++   */
++  public static function assertExists($unit) {
++    $allowed_units = [
++      self::KILOWATT, self::HORSEPOWER,
++    ];
++    if (!in_array($unit, $allowed_units)) {
++      throw new \InvalidArgumentException(sprintf('Invalid power unit "%s" provided.', $unit));
++    }
++  }
++
++}
+diff --git a/src/Torque.php b/src/Torque.php
+new file mode 100644
+index 0000000..75ed822
+--- /dev/null
++++ b/src/Torque.php
+@@ -0,0 +1,25 @@
++<?php
++
++namespace Drupal\physical;
++
++/**
++ * Provides a value object for weight amounts.
++ *
++ * Technically this is mass, not weight, but we prioritized user expectations
++ * over correctness.
++ *
++ * Usage example:
++ * @code
++ *   $power = new Torque('100', TorquetUnit::KILOWATT);
++ * @endcode
++ */
++final class Torque extends Measurement {
++
++  /**
++   * The measurement type.
++   *
++   * @var string
++   */
++  protected $type = MeasurementType::TORQUE;
++
++}
+diff --git a/src/TorqueUnit.php b/src/TorqueUnit.php
+new file mode 100644
+index 0000000..8c1c471
+--- /dev/null
++++ b/src/TorqueUnit.php
+@@ -0,0 +1,55 @@
++<?php
++
++namespace Drupal\physical;
++
++/**
++ * Provides force units.
++ */
++final class TorqueUnit implements UnitInterface {
++
++  const NEWTONMETER = 'Nm';
++  const FOOTPOUND = 'ft-lb';
++
++  /**
++   * {@inheritdoc}
++   */
++  public static function getLabels() {
++    return [
++      self::NEWTONMETER => t('Nm'),
++      self::FOOTPOUND => t('ft-lb'),
++    ];
++  }
++
++  /**
++   * {@inheritdoc}
++   */
++  public static function getBaseUnit() {
++    return self::NEWTONMETER;
++  }
++
++  /**
++   * {@inheritdoc}
++   */
++  public static function getBaseFactor($unit) {
++    self::assertExists($unit);
++    $factors = [
++      self::NEWTONMETER => '1',
++      self::FOOTPOUND => '1.35581795',
++    ];
++
++    return $factors[$unit];
++  }
++
++  /**
++   * {@inheritdoc}
++   */
++  public static function assertExists($unit) {
++    $allowed_units = [
++      self::NEWTONMETER, self::FOOTPOUND,
++    ];
++    if (!in_array($unit, $allowed_units)) {
++      throw new \InvalidArgumentException(sprintf('Invalid torque unit "%s" provided.', $unit));
++    }
++  }
++
++}
+-- 
+2.28.0.windows.1
+
