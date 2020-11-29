@@ -2,5 +2,5 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/motocomp/public_html/
-    - /usr/local/bin/composer install
+    - /opt/cpanel/composer/bin/composer install
     - /bin/cp -R * $DEPLOYPATH
