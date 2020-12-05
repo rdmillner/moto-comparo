@@ -2,5 +2,7 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/motocomp/public_html/
-    - /opt/cpanel/composer/bin/composer install
+    - /opt/cpanel/composer/bin/composer install --prefer-dist --no-progress --no-suggest
     - /bin/cp -R * $DEPLOYPATH
+    - drush updatedb
+    - drush cache:rebuild
