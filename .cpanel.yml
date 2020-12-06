@@ -4,5 +4,6 @@ deployment:
     - export DEPLOYPATH=/home/motocomp/public_html/
     - /opt/cpanel/composer/bin/composer install --prefer-dist --no-progress --no-suggest
     - /bin/cp -R * $DEPLOYPATH
-    - drush updatedb
-    - drush cache:rebuild
+    - alias drush2 = "/vendor/drush/drush/drush.php"
+    - drush2 updatedb
+    - drush2 cache:rebuild
