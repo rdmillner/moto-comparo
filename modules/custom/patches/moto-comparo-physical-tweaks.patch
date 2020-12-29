@@ -36,7 +36,7 @@ index a09560d..dea1665 100644
        self::CUBIC_FOOT => t('ft³'),
        self::FLUID_OUNCE => t('fl oz'),
        self::US_GALLON => t('gal'),
--- 
+--
 2.28.0.windows.1
 
 
@@ -62,7 +62,7 @@ index b209791..c562b48 100644
 -    $area = new Area('2', 'cm3');
 +    $area = new Area('2', 'cc');
    }
- 
+
    /**
 diff --git a/tests/src/Unit/VolumeTest.php b/tests/src/Unit/VolumeTest.php
 index a0e0988..5e1db3f 100644
@@ -79,7 +79,7 @@ index a0e0988..5e1db3f 100644
      $this->assertEquals(new Volume('141.259', 'ft3'), $this->volume->convert('ft3')->round(3));
      $this->assertEquals(new Volume('135256', 'fl oz'), $this->volume->convert('fl oz')->round());
      $this->assertEquals(new Volume('1056.69', 'gal'), $this->volume->convert('gal')->round(2));
--- 
+--
 2.28.0.windows.1
 
 
@@ -111,7 +111,7 @@ index d068cba..f2d466b 100644
    const WEIGHT = 'weight';
 +  const POWER = 'power';
 +  const TORQUE = 'torque';
- 
+
    /**
     * Gets the labels for the defined measurement types.
 @@ -26,6 +28,8 @@ final class MeasurementType {
@@ -122,7 +122,7 @@ index d068cba..f2d466b 100644
 +      self::TORQUE => t('Torque'),
      ];
    }
- 
+
 @@ -46,6 +50,8 @@ final class MeasurementType {
        self::TEMPERATURE => Temperature::class,
        self::VOLUME => Volume::class,
@@ -130,7 +130,7 @@ index d068cba..f2d466b 100644
 +      self::POWER => Power::class,
 +      self::TORQUE => Torque::class,
      ];
- 
+
      return $classes[$type];
 @@ -68,6 +74,8 @@ final class MeasurementType {
        self::TEMPERATURE => TemperatureUnit::class,
@@ -139,14 +139,14 @@ index d068cba..f2d466b 100644
 +      self::POWER => PowerUnit::class,
 +      self::TORQUE => TorqueUnit::class,
      ];
- 
+
      return $classes[$type];
 @@ -83,7 +91,7 @@ final class MeasurementType {
     */
    public static function assertExists($type) {
      $allowed_types = [
 -      self::AREA, self::LENGTH, self::TEMPERATURE, self::VOLUME, self::WEIGHT,
-+      self::AREA, self::LENGTH, self::TEMPERATURE, self::VOLUME, self::WEIGHT, self::POWER,
++      self::AREA, self::LENGTH, self::TEMPERATURE, self::VOLUME, self::WEIGHT, self::POWER, self::TORQUE,
      ];
      if (!in_array($type, $allowed_types)) {
        throw new \InvalidArgumentException(sprintf('Invalid measurement type "%s" provided.', $type));
@@ -334,6 +334,5 @@ index 0000000..8c1c471
 +  }
 +
 +}
--- 
+--
 2.28.0.windows.1
-
