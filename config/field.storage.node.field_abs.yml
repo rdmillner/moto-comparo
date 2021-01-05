@@ -1,0 +1,30 @@
+uuid: d62692c2-1a28-4c40-b3ba-51c601349a53
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_abs
+field_name: field_abs
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'No'
+      label: 'No'
+    -
+      value: Optional
+      label: Optional
+    -
+      value: 'Yes'
+      label: 'Yes'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

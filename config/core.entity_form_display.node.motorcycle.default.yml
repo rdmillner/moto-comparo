@@ -1,0 +1,506 @@
+uuid: ed0c3ba2-98d4-4306-a0bf-1c08c70072c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.motorcycle.body
+    - field.field.node.motorcycle.field_abs
+    - field.field.node.motorcycle.field_bore
+    - field.field.node.motorcycle.field_category
+    - field.field.node.motorcycle.field_clutch
+    - field.field.node.motorcycle.field_colors
+    - field.field.node.motorcycle.field_compression_ratio
+    - field.field.node.motorcycle.field_displacement
+    - field.field.node.motorcycle.field_dry_weight
+    - field.field.node.motorcycle.field_engine_cooling
+    - field.field.node.motorcycle.field_engine_long
+    - field.field.node.motorcycle.field_engine_type
+    - field.field.node.motorcycle.field_final_drive
+    - field.field.node.motorcycle.field_frame_type
+    - field.field.node.motorcycle.field_front_brake
+    - field.field.node.motorcycle.field_front_suspension_travel
+    - field.field.node.motorcycle.field_front_suspension_type
+    - field.field.node.motorcycle.field_front_tire_size
+    - field.field.node.motorcycle.field_fuel_capacity
+    - field.field.node.motorcycle.field_fuel_mix
+    - field.field.node.motorcycle.field_fuel_reserve
+    - field.field.node.motorcycle.field_ground_clearance
+    - field.field.node.motorcycle.field_horsepower
+    - field.field.node.motorcycle.field_make
+    - field.field.node.motorcycle.field_max_rpm
+    - field.field.node.motorcycle.field_model
+    - field.field.node.motorcycle.field_model_year
+    - field.field.node.motorcycle.field_number_of_cylinders
+    - field.field.node.motorcycle.field_number_of_gears
+    - field.field.node.motorcycle.field_octane
+    - field.field.node.motorcycle.field_overall_height
+    - field.field.node.motorcycle.field_overall_length
+    - field.field.node.motorcycle.field_overall_width
+    - field.field.node.motorcycle.field_payload
+    - field.field.node.motorcycle.field_pictures
+    - field.field.node.motorcycle.field_rake
+    - field.field.node.motorcycle.field_rear_brake
+    - field.field.node.motorcycle.field_rear_suspension_travel
+    - field.field.node.motorcycle.field_rear_suspension_type
+    - field.field.node.motorcycle.field_rear_tire_size
+    - field.field.node.motorcycle.field_seat_height
+    - field.field.node.motorcycle.field_spec_sheet
+    - field.field.node.motorcycle.field_stroke
+    - field.field.node.motorcycle.field_torque
+    - field.field.node.motorcycle.field_trail
+    - field.field.node.motorcycle.field_transmission
+    - field.field.node.motorcycle.field_transmission_type
+    - field.field.node.motorcycle.field_type
+    - field.field.node.motorcycle.field_wet_weight
+    - field.field.node.motorcycle.field_wheelbase
+    - image.style.thumbnail
+    - node.type.motorcycle
+  module:
+    - file
+    - image
+    - path
+    - physical
+id: node.motorcycle.default
+targetEntityType: node
+bundle: motorcycle
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_abs:
+    weight: 45
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_bore:
+    weight: 19
+    settings:
+      default_unit: ''
+      allow_unit_change: true
+    third_party_settings: {  }
+    type: physical_measurement_default
+    region: content
+  field_category:
+    weight: 53
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_clutch:
+    weight: 48
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_colors:
+    weight: 54
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_compression_ratio:
+    weight: 18
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_displacement:
+    weight: 13
+    settings:
+      default_unit: ''
+      allow_unit_change: true
+    third_party_settings: {  }
+    type: physical_measurement_default
+    region: content
+  field_dry_weight:
+    weight: 21
+    settings:
+      default_unit: ''
+      allow_unit_change: true
+    third_party_settings: {  }
+    type: physical_measurement_default
+    region: content
+  field_engine_cooling:
+    weight: 17
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_engine_long:
+    weight: 11
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_engine_type:
+    weight: 12
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_final_drive:
+    weight: 33
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_frame_type:
+    weight: 41
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_front_brake:
+    weight: 43
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_front_suspension_travel:
+    weight: 29
+    settings:
+      default_unit: ''
+      allow_unit_change: true
+    third_party_settings: {  }
+    type: physical_measurement_default
+    region: content
+  field_front_suspension_type:
+    weight: 31
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_front_tire_size:
+    weight: 50
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_fuel_capacity:
+    weight: 38
+    settings:
+      default_unit: ''
+      allow_unit_change: true
+    third_party_settings: {  }
+    type: physical_measurement_default
+    region: content
+  field_fuel_mix:
+    weight: 52
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_fuel_reserve:
+    weight: 39
+    settings:
+      default_unit: ''
+      allow_unit_change: true
+    third_party_settings: {  }
+    type: physical_measurement_default
+    region: content
+  field_ground_clearance:
+    weight: 27
+    settings:
+      default_unit: ''
+      allow_unit_change: true
+    third_party_settings: {  }
+    type: physical_measurement_default
+    region: content
+  field_horsepower:
+    weight: 56
+    settings:
+      default_unit: ''
+      allow_unit_change: true
+    third_party_settings: {  }
+    type: physical_measurement_default
+    region: content
+  field_make:
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_max_rpm:
+    weight: 40
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_model:
+    weight: 3
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_model_year:
+    weight: 1
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_number_of_cylinders:
+    weight: 16
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_number_of_gears:
+    weight: 34
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_octane:
+    weight: 37
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_overall_height:
+    weight: 25
+    settings:
+      default_unit: ''
+      allow_unit_change: true
+    third_party_settings: {  }
+    type: physical_measurement_default
+    region: content
+  field_overall_length:
+    weight: 23
+    settings:
+      default_unit: ''
+      allow_unit_change: true
+    third_party_settings: {  }
+    type: physical_measurement_default
+    region: content
+  field_overall_width:
+    weight: 24
+    settings:
+      default_unit: ''
+      allow_unit_change: true
+    third_party_settings: {  }
+    type: physical_measurement_default
+    region: content
+  field_payload:
+    weight: 49
+    settings:
+      default_unit: ''
+      allow_unit_change: true
+    third_party_settings: {  }
+    type: physical_measurement_default
+    region: content
+  field_pictures:
+    weight: 55
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_rake:
+    weight: 36
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_rear_brake:
+    weight: 44
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_rear_suspension_travel:
+    weight: 30
+    settings:
+      default_unit: ''
+      allow_unit_change: true
+    third_party_settings: {  }
+    type: physical_measurement_default
+    region: content
+  field_rear_suspension_type:
+    weight: 32
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_rear_tire_size:
+    weight: 51
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_seat_height:
+    weight: 28
+    settings:
+      default_unit: ''
+      allow_unit_change: true
+    third_party_settings: {  }
+    type: physical_measurement_default
+    region: content
+  field_spec_sheet:
+    weight: 58
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+  field_stroke:
+    weight: 20
+    settings:
+      default_unit: ''
+      allow_unit_change: true
+    third_party_settings: {  }
+    type: physical_measurement_default
+    region: content
+  field_torque:
+    weight: 57
+    settings:
+      default_unit: ''
+      allow_unit_change: true
+    third_party_settings: {  }
+    type: physical_measurement_default
+    region: content
+  field_trail:
+    weight: 35
+    settings:
+      default_unit: ''
+      allow_unit_change: true
+    third_party_settings: {  }
+    type: physical_measurement_default
+    region: content
+  field_transmission:
+    weight: 47
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_transmission_type:
+    weight: 46
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_type:
+    weight: 42
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_wet_weight:
+    weight: 22
+    settings:
+      default_unit: ''
+      allow_unit_change: true
+    third_party_settings: {  }
+    type: physical_measurement_default
+    region: content
+  field_wheelbase:
+    weight: 26
+    settings:
+      default_unit: ''
+      allow_unit_change: true
+    third_party_settings: {  }
+    type: physical_measurement_default
+    region: content
+  path:
+    type: path
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 6
+    region: content
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 10
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 7
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 4
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    region: content
+    third_party_settings: {  }
+  url_redirects:
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  body: true

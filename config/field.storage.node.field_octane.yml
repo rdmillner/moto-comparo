@@ -1,0 +1,24 @@
+uuid: 96b0b6fe-aa2c-440d-94c8-5d74cfca9784
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_octane
+field_name: field_octane
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: ron91
+      label: '91 RON (86 OCT)'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

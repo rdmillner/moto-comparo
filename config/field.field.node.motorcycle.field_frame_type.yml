@@ -1,0 +1,19 @@
+uuid: 84395b38-db70-410b-8f14-38801aea622c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_frame_type
+    - node.type.motorcycle
+id: node.motorcycle.field_frame_type
+field_name: field_frame_type
+entity_type: node
+bundle: motorcycle
+label: 'Frame Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

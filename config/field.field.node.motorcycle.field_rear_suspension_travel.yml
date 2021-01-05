@@ -1,0 +1,21 @@
+uuid: 50ea070f-54fb-4ec9-913a-8f170be87fde
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_rear_suspension_travel
+    - node.type.motorcycle
+  module:
+    - physical
+id: node.motorcycle.field_rear_suspension_travel
+field_name: field_rear_suspension_travel
+entity_type: node
+bundle: motorcycle
+label: 'Rear Suspension Travel'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: physical_measurement

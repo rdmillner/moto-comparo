@@ -1,0 +1,21 @@
+uuid: b6062e29-e174-411e-8838-ded9e48e8fa8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_wet_weight
+    - node.type.motorcycle
+  module:
+    - physical
+id: node.motorcycle.field_wet_weight
+field_name: field_wet_weight
+entity_type: node
+bundle: motorcycle
+label: 'Wet Weight'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: physical_measurement

@@ -1,0 +1,23 @@
+uuid: 4a994ab6-95ab-4081-8470-6fad7f448b12
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_transmission_type
+    - node.type.motorcycle
+  module:
+    - options
+id: node.motorcycle.field_transmission_type
+field_name: field_transmission_type
+entity_type: node
+bundle: motorcycle
+label: 'Transmission Type'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: manual
+default_value_callback: ''
+settings: {  }
+field_type: list_string

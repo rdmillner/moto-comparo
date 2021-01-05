@@ -1,0 +1,20 @@
+uuid: 6c0b08c4-58bc-4ae1-8084-3a264cd4cee8
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - physical
+id: node.field_seat_height
+field_name: field_seat_height
+entity_type: node
+type: physical_measurement
+settings:
+  measurement_type: length
+module: physical
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,20 @@
+uuid: 786f748d-f1eb-406f-8da8-a56e84c17b23
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - physical
+id: node.field_rear_suspension_travel
+field_name: field_rear_suspension_travel
+entity_type: node
+type: physical_measurement
+settings:
+  measurement_type: length
+module: physical
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

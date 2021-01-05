@@ -1,0 +1,21 @@
+uuid: 1dc3ca4d-990e-45fa-9962-df605cb37623
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_stroke
+    - node.type.motorcycle
+  module:
+    - physical
+id: node.motorcycle.field_stroke
+field_name: field_stroke
+entity_type: node
+bundle: motorcycle
+label: Stroke
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: physical_measurement

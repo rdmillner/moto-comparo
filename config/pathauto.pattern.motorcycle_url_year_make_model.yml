@@ -1,0 +1,22 @@
+uuid: 6f027665-8e27-4ecb-a4fd-a4d6aa3a9789
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: motorcycle_url_year_make_model
+label: 'Motorcycle URL - Year/Make/Model'
+type: 'canonical_entities:node'
+pattern: '[node:field_make]/[node:field_model_year]-[node:field_model]'
+selection_criteria:
+  03124b4c-7949-4809-83e3-1a83449db7b1:
+    id: node_type
+    bundles:
+      motorcycle: motorcycle
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 03124b4c-7949-4809-83e3-1a83449db7b1
+selection_logic: and
+weight: -5
+relationships: {  }
