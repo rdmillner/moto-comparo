@@ -10,5 +10,6 @@ deployment:
     - pwd
     - echo $PATH
     - whoami
-    - which drush
-    - /home/motocomp/vendor/drush/drush/drush deploy -vvv -y
+    # - /home/motocomp/vendor/drush/drush/drush deploy -vvv -y
+    - cd $DEPLOYPATH
+    - drush deploy -vvv -y
