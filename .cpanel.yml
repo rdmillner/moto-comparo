@@ -9,4 +9,5 @@ deployment:
 #    - vendor/bin/drush cache:rebuild
     - pwd
     - echo $PATH
+    - whoami
     - /home/motocomp/vendor/drush/drush/drush deploy -v -y
