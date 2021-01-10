@@ -12,4 +12,5 @@ deployment:
     - whoami
     # - /home/motocomp/vendor/drush/drush/drush deploy -vvv -y
     - cd $DEPLOYPATH
-    - drush deploy -vvv -y
+    - pwd
+    - ${DEPLOYPATH}vendor/drush/drush/drush deploy -vvv -y
