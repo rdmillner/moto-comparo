@@ -7,4 +7,4 @@ deployment:
 #    - vendor/bin/drush config:import --yes
 #    - vendor/bin/drush updatedb
 #    - vendor/bin/drush cache:rebuild
-    - vendor/bin/drush deploy -v -y
+    - vendor/bin/drush/drush/drush deploy -v -y
