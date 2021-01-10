@@ -13,4 +13,4 @@ deployment:
     # - /home/motocomp/vendor/drush/drush/drush deploy -vvv -y
     - cd $DEPLOYPATH
     - pwd
-    - ${DEPLOYPATH}vendor/drush/drush/drush deploy -vvv -y
+    - ${DEPLOYPATH}vendor/drush/drush/drush deploy -vvv -y --source=config
