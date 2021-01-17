@@ -4,13 +4,5 @@ deployment:
     - export DEPLOYPATH=/home/motocomp/public_html/
     - /opt/cpanel/composer/bin/composer install --prefer-dist --no-progress --no-suggest
     - /bin/cp -R * $DEPLOYPATH
-#    - vendor/bin/drush config:import --yes
-#    - vendor/bin/drush updatedb
-#    - vendor/bin/drush cache:rebuild
-    - pwd
-    - echo $PATH
-    - whoami
-    # - /home/motocomp/vendor/drush/drush/drush deploy -vvv -y
     - cd $DEPLOYPATH
-    - pwd
-    - ${DEPLOYPATH}vendor/drush/drush/drush deploy -vvv -y
+    - ${DEPLOYPATH}vendor/drush/drush/drush deploy -y
