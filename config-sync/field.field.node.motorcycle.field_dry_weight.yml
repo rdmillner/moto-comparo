@@ -1,0 +1,21 @@
+uuid: 8ea0ae8c-836c-4eee-a417-7e83b75611cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dry_weight
+    - node.type.motorcycle
+  module:
+    - physical
+id: node.motorcycle.field_dry_weight
+field_name: field_dry_weight
+entity_type: node
+bundle: motorcycle
+label: 'Dry Weight'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: physical_measurement

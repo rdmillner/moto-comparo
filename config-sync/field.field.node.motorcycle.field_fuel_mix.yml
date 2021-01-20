@@ -1,0 +1,19 @@
+uuid: 9224c8ef-5dc7-4153-9890-ce1a69c61cc7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fuel_mix
+    - node.type.motorcycle
+id: node.motorcycle.field_fuel_mix
+field_name: field_fuel_mix
+entity_type: node
+bundle: motorcycle
+label: 'Fuel Mix'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

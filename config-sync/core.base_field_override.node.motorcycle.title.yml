@@ -1,0 +1,18 @@
+uuid: 51d789f7-a4a2-4f89-b9da-91c4ef8e2fa6
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.motorcycle
+id: node.motorcycle.title
+field_name: title
+entity_type: node
+bundle: motorcycle
+label: Motorcycle
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,29 @@
+uuid: de451cf5-9756-4c30-9294-4b0a90e74b26
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_engine_type
+    - node.type.motorcycle
+    - taxonomy.vocabulary.engine_type
+id: node.motorcycle.field_engine_type
+field_name: field_engine_type
+entity_type: node
+bundle: motorcycle
+label: 'Engine Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      engine_type: engine_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

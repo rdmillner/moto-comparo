@@ -1,0 +1,21 @@
+uuid: caafbaae-2df8-47d9-8984-bb3ddfe44f76
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_bore
+    - node.type.motorcycle
+  module:
+    - physical
+id: node.motorcycle.field_bore
+field_name: field_bore
+entity_type: node
+bundle: motorcycle
+label: Bore
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: physical_measurement

@@ -1,0 +1,8 @@
+uuid: c1922c00-5522-4c96-8c28-41a362732809
+langcode: en
+status: true
+dependencies: {  }
+name: Model
+vid: model
+description: 'Vocabulary for list of model names.'
+weight: 0

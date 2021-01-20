@@ -1,0 +1,8 @@
+uuid: 1618cbde-d358-4e15-8ae6-1763c6c9baae
+langcode: en
+status: true
+dependencies: {  }
+name: 'Engine Type'
+vid: engine_type
+description: 'Vocabulary for types of engines.'
+weight: 0

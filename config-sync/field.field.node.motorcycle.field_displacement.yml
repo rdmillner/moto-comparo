@@ -1,0 +1,21 @@
+uuid: d6b5d242-7459-421f-b658-85783327d57e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_displacement
+    - node.type.motorcycle
+  module:
+    - physical
+id: node.motorcycle.field_displacement
+field_name: field_displacement
+entity_type: node
+bundle: motorcycle
+label: Displacement
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: physical_measurement

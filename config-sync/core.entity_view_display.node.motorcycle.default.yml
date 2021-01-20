@@ -1,0 +1,484 @@
+uuid: 647a4312-b848-4810-ba7a-aa19e6ef3c2f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.motorcycle.body
+    - field.field.node.motorcycle.field_abs
+    - field.field.node.motorcycle.field_bore
+    - field.field.node.motorcycle.field_category
+    - field.field.node.motorcycle.field_clutch
+    - field.field.node.motorcycle.field_colors
+    - field.field.node.motorcycle.field_compression_ratio
+    - field.field.node.motorcycle.field_displacement
+    - field.field.node.motorcycle.field_dry_weight
+    - field.field.node.motorcycle.field_engine_cooling
+    - field.field.node.motorcycle.field_engine_long
+    - field.field.node.motorcycle.field_engine_type
+    - field.field.node.motorcycle.field_final_drive
+    - field.field.node.motorcycle.field_frame_type
+    - field.field.node.motorcycle.field_front_brake
+    - field.field.node.motorcycle.field_front_suspension_travel
+    - field.field.node.motorcycle.field_front_suspension_type
+    - field.field.node.motorcycle.field_front_tire_size
+    - field.field.node.motorcycle.field_fuel_capacity
+    - field.field.node.motorcycle.field_fuel_mix
+    - field.field.node.motorcycle.field_fuel_reserve
+    - field.field.node.motorcycle.field_ground_clearance
+    - field.field.node.motorcycle.field_horsepower
+    - field.field.node.motorcycle.field_make
+    - field.field.node.motorcycle.field_max_rpm
+    - field.field.node.motorcycle.field_model
+    - field.field.node.motorcycle.field_model_year
+    - field.field.node.motorcycle.field_number_of_cylinders
+    - field.field.node.motorcycle.field_number_of_gears
+    - field.field.node.motorcycle.field_octane
+    - field.field.node.motorcycle.field_overall_height
+    - field.field.node.motorcycle.field_overall_length
+    - field.field.node.motorcycle.field_overall_width
+    - field.field.node.motorcycle.field_payload
+    - field.field.node.motorcycle.field_pictures
+    - field.field.node.motorcycle.field_rake
+    - field.field.node.motorcycle.field_rear_brake
+    - field.field.node.motorcycle.field_rear_suspension_travel
+    - field.field.node.motorcycle.field_rear_suspension_type
+    - field.field.node.motorcycle.field_rear_tire_size
+    - field.field.node.motorcycle.field_seat_height
+    - field.field.node.motorcycle.field_spec_sheet
+    - field.field.node.motorcycle.field_stroke
+    - field.field.node.motorcycle.field_torque
+    - field.field.node.motorcycle.field_trail
+    - field.field.node.motorcycle.field_transmission
+    - field.field.node.motorcycle.field_transmission_type
+    - field.field.node.motorcycle.field_type
+    - field.field.node.motorcycle.field_wet_weight
+    - field.field.node.motorcycle.field_wheelbase
+    - node.type.motorcycle
+  module:
+    - field_group
+    - file
+    - image
+    - options
+    - physical
+    - user
+third_party_settings:
+  field_group:
+    group_engine:
+      children:
+        - field_engine_long
+        - field_engine_cooling
+        - field_hp
+        - field_torque
+        - field_displacement
+        - field_bore
+        - field_stroke
+        - field_compression_ratio
+      parent_name: ''
+      weight: 4
+      format_type: fieldset
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+      label: Engine
+    group_dimensions:
+      children:
+        - field_dry_weight
+        - field_wet_weight
+        - field_seat_height
+        - field_wheelbase
+        - field_overall_length
+        - field_overall_width
+        - field_overall_height
+        - field_ground_clearance
+      parent_name: ''
+      weight: 5
+      format_type: fieldset
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+      label: Dimensions
+    group_chassis:
+      children:
+        - field_frame_type
+        - field_front_suspension_type
+        - field_front_suspension_travel
+        - field_rear_suspension_type
+        - field_rear_suspension_travel
+        - field_front_brake
+        - field_rear_brake
+        - field_abs
+        - field_front_tire_size
+        - field_rear_tire_size
+      parent_name: ''
+      weight: 6
+      format_type: fieldset
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+      label: Chassis
+id: node.motorcycle.default
+targetEntityType: node
+bundle: motorcycle
+mode: default
+content:
+  field_abs:
+    weight: 29
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_bore:
+    weight: 9
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: physical_measurement_default
+    region: content
+  field_category:
+    weight: 2
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_clutch:
+    weight: 18
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_colors:
+    weight: 9
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_compression_ratio:
+    weight: 11
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_displacement:
+    weight: 8
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: physical_measurement_default
+    region: content
+  field_dry_weight:
+    weight: 25
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: physical_measurement_default
+    region: content
+  field_engine_cooling:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_engine_long:
+    weight: 4
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_final_drive:
+    weight: 7
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_frame_type:
+    weight: 22
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_front_brake:
+    weight: 27
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_front_suspension_travel:
+    weight: 24
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: physical_measurement_default
+    region: content
+  field_front_suspension_type:
+    weight: 23
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_front_tire_size:
+    weight: 30
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_fuel_capacity:
+    weight: 14
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: physical_measurement_default
+    region: content
+  field_fuel_mix:
+    weight: 21
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_fuel_reserve:
+    weight: 13
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: physical_measurement_default
+    region: content
+  field_ground_clearance:
+    weight: 32
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: physical_measurement_default
+    region: content
+  field_horsepower:
+    weight: 33
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: physical_measurement_default
+    region: content
+  field_make:
+    weight: 3
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_max_rpm:
+    weight: 16
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_number_of_gears:
+    weight: 10
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_octane:
+    weight: 15
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_overall_height:
+    weight: 31
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: physical_measurement_default
+    region: content
+  field_overall_length:
+    weight: 29
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: physical_measurement_default
+    region: content
+  field_overall_width:
+    weight: 30
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: physical_measurement_default
+    region: content
+  field_payload:
+    weight: 20
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: physical_measurement_default
+    region: content
+  field_pictures:
+    weight: 8
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_rake:
+    weight: 12
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_rear_brake:
+    weight: 28
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_rear_suspension_travel:
+    weight: 26
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: physical_measurement_default
+    region: content
+  field_rear_suspension_type:
+    weight: 25
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_rear_tire_size:
+    type: string
+    weight: 31
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_seat_height:
+    weight: 27
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: physical_measurement_default
+    region: content
+  field_spec_sheet:
+    weight: 35
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  field_stroke:
+    weight: 10
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: physical_measurement_default
+    region: content
+  field_torque:
+    weight: 34
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: physical_measurement_default
+    region: content
+  field_trail:
+    weight: 11
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: physical_measurement_default
+    region: content
+  field_transmission:
+    weight: 17
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_transmission_type:
+    weight: 19
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_type:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_wet_weight:
+    weight: 26
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: physical_measurement_default
+    region: content
+  field_wheelbase:
+    weight: 28
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: physical_measurement_default
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  body: true
+  field_engine_type: true
+  field_model: true
+  field_model_year: true
+  field_number_of_cylinders: true

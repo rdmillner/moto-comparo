@@ -1,0 +1,19 @@
+uuid: 97dbf44d-c302-4816-9973-4f5ee111fca2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_clutch
+    - node.type.motorcycle
+id: node.motorcycle.field_clutch
+field_name: field_clutch
+entity_type: node
+bundle: motorcycle
+label: Clutch
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
