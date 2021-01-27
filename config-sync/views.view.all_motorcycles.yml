@@ -1,6 +1,6 @@
-uuid: b875b991-2dac-40c4-95f6-b3d983bd8aa7
+uuid: 357671a5-092a-43a6-96d6-50fa5d5d6380
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
@@ -11,8 +11,8 @@ dependencies:
     - image
     - node
     - user
-id: specs_list
-label: 'Specs List'
+id: all_motorcycles
+label: 'All Motorcycles'
 module: views
 description: 'Complete list of all motorcycles in the system. '
 tag: ''
@@ -262,7 +262,7 @@ display:
           entity_type: node
           entity_field: title
           plugin_id: standard
-      title: 'Specs List'
+      title: ''
       header: {  }
       footer: {  }
       empty: {  }
@@ -270,6 +270,7 @@ display:
       arguments: {  }
       display_extenders: {  }
       css_class: ''
+      use_ajax: true
     cache_metadata:
       max-age: -1
       contexts:
@@ -304,7 +305,7 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: specs-list
+      path: motorcycles
     cache_metadata:
       max-age: -1
       contexts:

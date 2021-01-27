@@ -135,7 +135,7 @@ display:
             operator_limit_selection: false
             operator_list: {  }
       sorts: {  }
-      title: Makes
+      title: Manufacturers
       header: {  }
       footer: {  }
       empty: {  }
@@ -156,16 +156,17 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: makes
+      path: manufacturers
       menu:
         type: normal
-        title: Makes
+        title: Manufacturers
         description: 'List of all motorcycle manufacturers covered by the site. '
         expanded: false
         parent: ''
         weight: 0
         context: '0'
         menu_name: main
+        enabled: true
     cache_metadata:
       max-age: -1
       contexts:
