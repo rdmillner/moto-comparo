@@ -12,14 +12,17 @@ type: list_string
 settings:
   allowed_values:
     -
-      value: 'No'
+      value: 'no'
       label: 'No'
     -
-      value: Optional
+      value: optional
       label: Optional
     -
-      value: 'Yes'
+      value: 'yes'
       label: 'Yes'
+    -
+      value: switchable
+      label: 'Yes (switchable)'
   allowed_values_function: ''
 module: options
 locked: false

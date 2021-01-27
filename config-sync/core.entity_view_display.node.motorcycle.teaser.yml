@@ -53,7 +53,7 @@ dependencies:
     - field.field.node.motorcycle.field_type
     - field.field.node.motorcycle.field_wet_weight
     - field.field.node.motorcycle.field_wheelbase
-    - image.style.large
+    - image.style.max_650x650
     - node.type.motorcycle
   module:
     - field_group
@@ -65,11 +65,13 @@ third_party_settings:
   field_group:
     group_data_div:
       children:
-        - field_category
         - field_displacement
+        - field_category
         - field_engine_type
+        - field_dry_weight
+        - field_wet_weight
         - field_seat_height
-        - field_transmission_type
+        - field_abs
       parent_name: ''
       weight: 1
       format_type: html_element
@@ -90,9 +92,16 @@ targetEntityType: node
 bundle: motorcycle
 mode: teaser
 content:
+  field_abs:
+    type: list_default
+    weight: 6
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
   field_category:
     type: entity_reference_label
-    weight: 0
+    weight: 2
     region: content
     label: above
     settings:
@@ -100,14 +109,21 @@ content:
     third_party_settings: {  }
   field_displacement:
     type: physical_measurement_default
-    weight: 0
+    weight: 1
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_dry_weight:
+    type: physical_measurement_default
+    weight: 4
     region: content
     label: above
     settings: {  }
     third_party_settings: {  }
   field_engine_type:
     type: entity_reference_label
-    weight: 0
+    weight: 3
     region: content
     label: above
     settings:
@@ -124,7 +140,7 @@ content:
       optionset_thumbnail: ''
       skin: default
       skin_thumbnail: ''
-      image_style: large
+      image_style: max_650x650
       responsive_image_style: ''
       thumbnail_effect: ''
       thumbnail_position: ''
@@ -140,7 +156,7 @@ content:
       caption:
         alt: alt
         title: '0'
-      cache: -1
+      cache: 0
       current_view_mode: teaser
       background: false
       preserve_keys: false
@@ -170,27 +186,25 @@ content:
     third_party_settings: {  }
   field_seat_height:
     type: physical_measurement_default
-    weight: 0
+    weight: 5
     region: content
     label: above
     settings: {  }
     third_party_settings: {  }
-  field_transmission_type:
-    type: list_default
-    weight: 0
+  field_wet_weight:
+    type: physical_measurement_default
+    weight: 4
     region: content
     label: above
     settings: {  }
     third_party_settings: {  }
 hidden:
   body: true
-  field_abs: true
   field_air_fuel_mixer: true
   field_bore: true
   field_clutch: true
   field_colors: true
   field_compression_ratio: true
-  field_dry_weight: true
   field_engine_cooling: true
   field_engine_long: true
   field_final_drive: true
@@ -223,7 +237,7 @@ hidden:
   field_stroke: true
   field_torque: true
   field_trail: true
+  field_transmission_type: true
   field_type: true
-  field_wet_weight: true
   field_wheelbase: true
   links: true
