@@ -9,7 +9,7 @@ id: node.motorcycle.field_front_tire_size
 field_name: field_front_tire_size
 entity_type: node
 bundle: motorcycle
-label: 'Front Tire Size'
+label: 'Front Tire'
 description: ''
 required: false
 translatable: false

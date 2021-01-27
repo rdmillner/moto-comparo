@@ -1,0 +1,30 @@
+uuid: eba30845-f037-487e-9331-70db96a8e592
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_air_fuel_mixer
+field_name: field_air_fuel_mixer
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: efi
+      label: 'Electronic Fuel Injection'
+    -
+      value: mfi
+      label: 'Mechanical Fuel Injection'
+    -
+      value: carb
+      label: Carburetor
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

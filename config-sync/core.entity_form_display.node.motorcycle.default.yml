@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.motorcycle.body
     - field.field.node.motorcycle.field_abs
+    - field.field.node.motorcycle.field_air_fuel_mixer
     - field.field.node.motorcycle.field_bore
     - field.field.node.motorcycle.field_category
     - field.field.node.motorcycle.field_clutch
@@ -22,7 +23,6 @@ dependencies:
     - field.field.node.motorcycle.field_front_suspension_type
     - field.field.node.motorcycle.field_front_tire_size
     - field.field.node.motorcycle.field_fuel_capacity
-    - field.field.node.motorcycle.field_fuel_mix
     - field.field.node.motorcycle.field_fuel_reserve
     - field.field.node.motorcycle.field_ground_clearance
     - field.field.node.motorcycle.field_horsepower
@@ -48,7 +48,6 @@ dependencies:
     - field.field.node.motorcycle.field_stroke
     - field.field.node.motorcycle.field_torque
     - field.field.node.motorcycle.field_trail
-    - field.field.node.motorcycle.field_transmission
     - field.field.node.motorcycle.field_transmission_type
     - field.field.node.motorcycle.field_type
     - field.field.node.motorcycle.field_wet_weight
@@ -73,6 +72,12 @@ content:
     third_party_settings: {  }
   field_abs:
     weight: 45
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_air_fuel_mixer:
+    weight: 59
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -211,14 +216,6 @@ content:
       allow_unit_change: true
     third_party_settings: {  }
     type: physical_measurement_default
-    region: content
-  field_fuel_mix:
-    weight: 52
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
     region: content
   field_fuel_reserve:
     weight: 39
@@ -415,14 +412,6 @@ content:
       allow_unit_change: true
     third_party_settings: {  }
     type: physical_measurement_default
-    region: content
-  field_transmission:
-    weight: 47
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
     region: content
   field_transmission_type:
     weight: 46
