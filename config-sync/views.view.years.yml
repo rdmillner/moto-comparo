@@ -1,19 +1,20 @@
-uuid: 807924dc-612b-4253-8ed4-e2c1c5f1bddb
+uuid: 4a2279b9-32c4-4bd9-ad94-2cd97f2bf655
 langcode: en
 status: true
 dependencies:
   config:
-    - node.type.motorcycle
+    - system.menu.footer
+    - taxonomy.vocabulary.year
   module:
-    - node
+    - taxonomy
     - user
-id: comparison_test
-label: 'Comparison Test'
+id: years
+label: Years
 module: views
 description: ''
 tag: ''
-base_table: node_field_data
-base_field: nid
+base_table: taxonomy_term_field_data
+base_field: tid
 display:
   default:
     display_plugin: default
@@ -49,19 +50,22 @@ display:
       pager:
         type: some
         options:
-          items_per_page: 2
+          items_per_page: 100
           offset: 0
       style:
-        type: default
+        type: grid
       row:
-        type: fields
+        type: 'entity:taxonomy_term'
+        options:
+          relationship: none
+          view_mode: default
       fields:
-        title:
-          id: title
-          table: node_field_data
-          field: title
-          entity_type: node
-          entity_field: title
+        name:
+          id: name
+          table: taxonomy_term_field_data
+          field: name
+          entity_type: taxonomy_term
+          entity_field: name
           label: ''
           alter:
             alter_text: false
@@ -74,9 +78,10 @@ display:
             html: false
           hide_empty: false
           empty_zero: false
+          type: string
           settings:
             link_to_entity: true
-          plugin_id: field
+          plugin_id: term_name
           relationship: none
           group_type: group
           admin_label: ''
@@ -92,7 +97,6 @@ display:
           empty: ''
           hide_alter_empty: true
           click_sort_column: value
-          type: string
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -103,13 +107,14 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          convert_spaces: false
       filters:
         status:
           value: '1'
-          table: node_field_data
+          table: taxonomy_term_field_data
           field: status
           plugin_id: boolean
-          entity_type: node
+          entity_type: taxonomy_term
           entity_field: status
           id: status
           expose:
@@ -117,31 +122,62 @@ display:
             operator_limit_selection: false
             operator_list: {  }
           group: 1
-        type:
-          id: type
-          table: node_field_data
-          field: type
+        vid:
+          id: vid
+          table: taxonomy_term_field_data
+          field: vid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
           value:
-            motorcycle: motorcycle
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
+            year: year
+          group: 1
+          exposed: false
           expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
             operator_limit_selection: false
             operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: taxonomy_term
+          entity_field: vid
+          plugin_id: bundle
       sorts: {  }
-      title: 'Comparison Test'
+      title: Years
       header: {  }
       footer: {  }
       empty: {  }
       relationships: {  }
       arguments: {  }
+      display_extenders: {  }
+      use_ajax: true
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - 'user.node_grants:view'
         - user.permissions
       tags: {  }
   page_1:
@@ -151,12 +187,20 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: comparison-test
+      path: years
+      menu:
+        type: normal
+        title: Years
+        description: 'List of all motorcycle years covered by the site. '
+        expanded: false
+        parent: ''
+        weight: 0
+        context: '0'
+        menu_name: footer
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - 'user.node_grants:view'
         - user.permissions
       tags: {  }
