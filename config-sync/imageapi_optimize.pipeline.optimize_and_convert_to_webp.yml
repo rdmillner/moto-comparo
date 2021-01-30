@@ -13,7 +13,7 @@ processors:
     id: tinypng
     weight: 1
     data:
-      api_key: 
+      api_key: null
   1f6640eb-35f2-4f5a-9e2f-2b0abc9f1c0b:
     uuid: 1f6640eb-35f2-4f5a-9e2f-2b0abc9f1c0b
     id: webp_webp

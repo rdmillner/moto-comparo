@@ -51,3 +51,6 @@
 /robots.txt
 /update.php
 /web.config
+
+# Ignore specific files for reasons
+/config-sync/imageapi_optimize.pipeline.optimize_and_convert_to_webp.yml
