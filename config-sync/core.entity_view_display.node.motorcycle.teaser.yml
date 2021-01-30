@@ -53,13 +53,13 @@ dependencies:
     - field.field.node.motorcycle.field_type
     - field.field.node.motorcycle.field_wet_weight
     - field.field.node.motorcycle.field_wheelbase
-    - image.style.max_650x650
+    - image.style.large
     - node.type.motorcycle
   module:
     - field_group
+    - image
     - options
     - physical
-    - slick
     - user
 third_party_settings:
   field_group:
@@ -130,59 +130,13 @@ content:
       link: true
     third_party_settings: {  }
   field_pictures:
-    type: slick_image
+    type: image
     weight: 0
     region: content
     label: hidden
     settings:
-      style: ''
-      optionset: default
-      optionset_thumbnail: ''
-      skin: default
-      skin_thumbnail: ''
-      image_style: max_650x650
-      responsive_image_style: ''
-      thumbnail_effect: ''
-      thumbnail_position: ''
-      media_switch: ''
-      thumbnail_style: ''
-      ratio: ''
-      grid: null
-      grid_medium: null
-      grid_small: null
-      visible_items: null
-      layout: ''
-      thumbnail_caption: ''
-      caption:
-        alt: alt
-        title: '0'
-      cache: 0
-      current_view_mode: teaser
-      background: false
-      preserve_keys: false
-      override: false
-      overridables:
-        arrows: '0'
-        autoplay: '0'
-        dots: '0'
-        draggable: '0'
-        infinite: '0'
-        mouseWheel: '0'
-        randomize: '0'
-        variableWidth: '0'
-      skin_arrows: ''
-      skin_dots: ''
-      fx: ''
-      icon: ''
-      view_mode: ''
-      box_caption: ''
-      box_caption_custom: ''
-      box_media_style: ''
-      box_style: ''
-      _uri: ''
-      breakpoints: {  }
-      sizes: ''
-      grid_header: ''
+      image_style: large
+      image_link: ''
     third_party_settings: {  }
   field_seat_height:
     type: physical_measurement_default
