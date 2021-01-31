@@ -26,7 +26,6 @@ dependencies:
     - field.field.node.motorcycle.field_fuel_reserve
     - field.field.node.motorcycle.field_ground_clearance
     - field.field.node.motorcycle.field_horsepower
-    - field.field.node.motorcycle.field_image
     - field.field.node.motorcycle.field_make
     - field.field.node.motorcycle.field_max_rpm
     - field.field.node.motorcycle.field_model
@@ -38,6 +37,7 @@ dependencies:
     - field.field.node.motorcycle.field_overall_length
     - field.field.node.motorcycle.field_overall_width
     - field.field.node.motorcycle.field_payload
+    - field.field.node.motorcycle.field_pictures
     - field.field.node.motorcycle.field_rake
     - field.field.node.motorcycle.field_rear_brake
     - field.field.node.motorcycle.field_rear_suspension_travel
@@ -52,11 +52,10 @@ dependencies:
     - field.field.node.motorcycle.field_type
     - field.field.node.motorcycle.field_wet_weight
     - field.field.node.motorcycle.field_wheelbase
-    - image.style.thumbnail
     - node.type.motorcycle
   module:
     - file
-    - image
+    - media_library
     - path
     - physical
 id: node.motorcycle.default
@@ -241,14 +240,6 @@ content:
     third_party_settings: {  }
     type: physical_measurement_default
     region: content
-  field_image:
-    weight: 60
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: image_image
-    region: content
   field_make:
     weight: 2
     settings:
@@ -334,6 +325,13 @@ content:
       allow_unit_change: true
     third_party_settings: {  }
     type: physical_measurement_default
+    region: content
+  field_pictures:
+    type: media_library_widget
+    weight: 60
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
     region: content
   field_rake:
     weight: 36
