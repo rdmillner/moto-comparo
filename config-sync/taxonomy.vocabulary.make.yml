@@ -2,7 +2,7 @@ uuid: 53a237be-176a-4a17-bc6b-df48e01a98f1
 langcode: en
 status: true
 dependencies: {  }
-name: Make
+name: Manufacturer
 vid: make
 description: 'Vocabulary for the different makes of motorcycle.'
 weight: 0

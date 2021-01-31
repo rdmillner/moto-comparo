@@ -1,0 +1,22 @@
+uuid: 1a0ae993-1b8c-4147-b07b-70e897b42131
+langcode: en
+status: true
+dependencies:
+  module:
+    - imageapi_optimize_tinypng
+    - webp
+name: optimize_and_convert_to_webp
+label: 'Optimize and Convert to WebP'
+processors:
+  f99669c4-c5f6-44d2-8d25-1e7687216d68:
+    uuid: f99669c4-c5f6-44d2-8d25-1e7687216d68
+    id: tinypng
+    weight: 1
+    data:
+      api_key: null
+  1f6640eb-35f2-4f5a-9e2f-2b0abc9f1c0b:
+    uuid: 1f6640eb-35f2-4f5a-9e2f-2b0abc9f1c0b
+    id: webp_webp
+    weight: 2
+    data:
+      quality: '100'

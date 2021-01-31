@@ -9,7 +9,7 @@ id: node.motorcycle.field_rear_tire_size
 field_name: field_rear_tire_size
 entity_type: node
 bundle: motorcycle
-label: 'Rear Tire Size'
+label: 'Rear Tire'
 description: ''
 required: false
 translatable: false
