@@ -53,9 +53,11 @@ dependencies:
     - field.field.node.motorcycle.field_type
     - field.field.node.motorcycle.field_wet_weight
     - field.field.node.motorcycle.field_wheelbase
+    - image.style.max_325x325
     - node.type.motorcycle
   module:
     - field_group
+    - image
     - options
     - physical
     - user
@@ -103,7 +105,7 @@ content:
     region: content
     label: above
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
   field_displacement:
     type: physical_measurement_default
@@ -125,7 +127,16 @@ content:
     region: content
     label: above
     settings:
-      link: true
+      link: false
+    third_party_settings: {  }
+  field_image:
+    type: image
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: max_325x325
+      image_link: ''
     third_party_settings: {  }
   field_seat_height:
     type: physical_measurement_default
@@ -160,7 +171,6 @@ hidden:
   field_fuel_reserve: true
   field_ground_clearance: true
   field_horsepower: true
-  field_image: true
   field_make: true
   field_max_rpm: true
   field_model: true

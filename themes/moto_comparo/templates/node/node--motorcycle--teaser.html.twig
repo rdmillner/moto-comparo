@@ -1,5 +1,10 @@
 {# START Display motorcyle teaser #}
-<article{{ attributes.addClass(classes) }}>
+{% set
+  manufacturerClass = [
+    node.field_make[0].entity.label|clean_class
+  ]
+%}
+<article{{ attributes.addClass(classes, manufacturerClass) }}>
   <header>
     {{ title_prefix }}
       {% if label and not page %}
