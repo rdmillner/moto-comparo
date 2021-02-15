@@ -116,7 +116,7 @@
         },
         "patches": {
           "drupal/physical": {
-            "Adding fields for Torque and Power": "~/public_html/modules/custom/patches/moto-comparo-physical-tweaks.patch"
+            "Adding fields for Torque and Power": "../../public_html/modules/custom/patches/moto-comparo-physical-tweaks.patch"
           },
           "drupal/webp": {
             "Adding a patch that should work WebP work with better in Drupal 9": "https://www.drupal.org/files/issues/2020-08-31/webp-imagapi_optimize-3063808-11.patch"
