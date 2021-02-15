@@ -468,6 +468,8 @@ content:
 hidden:
   body: true
   field_engine_type: true
+  field_fuel_mix: true
   field_model: true
   field_model_year: true
   field_number_of_cylinders: true
+  field_transmission: true
