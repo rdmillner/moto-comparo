@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "87899678bca3fd7fd0715a6b3fa0a21b",
+    "content-hash": "a537993f7f005231e4a66e38a7f8df52",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2331,6 +2331,51 @@
             "homepage": "https://www.drupal.org/project/imageapi_optimize_tinypng",
             "support": {
                 "source": "https://git.drupalcode.org/project/imageapi_optimize_tinypng"
+            }
+        },
+        {
+            "name": "drupal/imageapi_optimize_webp",
+            "version": "2.0.0-beta2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/imageapi_optimize_webp.git",
+                "reference": "2.0.0-beta2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/imageapi_optimize_webp-2.0.0-beta2.zip",
+                "reference": "2.0.0-beta2",
+                "shasum": "208b7c47ab9b670d837fc1ef17d9501ea70ad1ce"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9",
+                "drupal/imageapi_optimize": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.0-beta2",
+                    "datestamp": "1596567371",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "michaellander",
+                    "homepage": "https://www.drupal.org/user/636494"
+                }
+            ],
+            "description": "Provides a WebP processor to derive webp images from other file formats.",
+            "homepage": "https://www.drupal.org/project/imageapi_optimize_webp",
+            "support": {
+                "source": "https://git.drupalcode.org/project/imageapi_optimize_webp"
             }
         },
         {
@@ -7823,6 +7868,7 @@
         "drupal/auto_entitylabel": 10,
         "drupal/filefield_paths": 10,
         "drupal/imageapi_optimize_tinypng": 10,
+        "drupal/imageapi_optimize_webp": 10,
         "drupal/webp": 10
     },
     "prefer-stable": true,
