@@ -25,6 +25,8 @@ module:
   filter: 0
   history: 0
   image: 0
+  imageapi_optimize: 0
+  imageapi_optimize_tinypng: 0
   jquery_ui: 0
   jquery_ui_accordion: 0
   layout_discovery: 0
