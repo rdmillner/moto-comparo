@@ -2,8 +2,8 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/motocomp/public_html/
+    - chmod 777 $DEPLOYPATH/sites/default/settings.php
     - /bin/cp -r * $DEPLOYPATH
     - cd $DEPLOYPATH
-    - chmod 777 sites/default/settings.php
     - /opt/cpanel/composer/bin/composer install --prefer-dist --no-progress --no-suggest --optimize-autoloader
     - ${DEPLOYPATH}vendor/drush/drush/drush deploy -y
