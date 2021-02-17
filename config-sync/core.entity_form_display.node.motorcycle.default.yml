@@ -491,3 +491,5 @@ content:
     third_party_settings: {  }
 hidden:
   body: true
+  field_fuel_mix: true
+  field_transmission: true

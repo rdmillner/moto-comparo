@@ -157,6 +157,7 @@ hidden:
   field_front_suspension_type: true
   field_front_tire_size: true
   field_fuel_capacity: true
+  field_fuel_mix: true
   field_fuel_reserve: true
   field_ground_clearance: true
   field_horsepower: true
@@ -181,6 +182,7 @@ hidden:
   field_stroke: true
   field_torque: true
   field_trail: true
+  field_transmission: true
   field_transmission_type: true
   field_type: true
   field_wheelbase: true

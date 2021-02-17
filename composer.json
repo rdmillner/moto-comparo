@@ -29,6 +29,8 @@
         "drupal/field_group": "^3.1",
         "drupal/filefield_paths": "^1.0@beta",
         "drupal/imageapi_optimize_tinypng": "^1.1@beta",
+        "drupal/imageapi_optimize_webp": "^2.0@beta",
+        "drupal/imagemagick": "^3.1",
         "drupal/jquery_ui": "^1.4",
         "drupal/jquery_ui_accordion": "^1.1",
         "drupal/panels": "^4.6",
@@ -116,7 +118,10 @@
         },
         "patches": {
           "drupal/physical": {
-            "Adding fields for Torque and Power": "modules/custom/patches/moto-comparo-physical-tweaks.patch"
+            "Adding fields for Torque and Power": "patches/moto-comparo-physical-tweaks.patch"
+          },
+          "drupal/webp": {
+            "Adding a patch that should work WebP work with better in Drupal 9": "https://www.drupal.org/files/issues/2020-08-31/webp-imagapi_optimize-3063808-11.patch"
           }
         }
     }
