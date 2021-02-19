@@ -28,6 +28,7 @@
         "drupal/core-vendor-hardening": "^9",
         "drupal/field_group": "^3.1",
         "drupal/filefield_paths": "^1.0@beta",
+        "drupal/image_style_warmer": "^1.0",
         "drupal/imageapi_optimize_tinypng": "^1.1@beta",
         "drupal/imageapi_optimize_webp": "^2.0@beta",
         "drupal/imagemagick": "^3.1",
