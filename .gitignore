@@ -36,6 +36,7 @@
 /sites/development.services.yml
 /themes/README.txt
 /themes/contrib*
+/themes/custom/*/node_modules/
 /vendor
 /.csslintrc
 /.editorconfig

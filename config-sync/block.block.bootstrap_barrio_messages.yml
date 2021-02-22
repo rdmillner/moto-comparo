@@ -1,15 +1,15 @@
-uuid: 7742ef5d-544c-4be1-b26a-bd2bec64e233
+uuid: a8c5ed5a-7c19-4bda-a934-20b8de4cfcb4
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - moto_comparo
+    - bootstrap_barrio
 _core:
   default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
-id: moto_comparo_messages
-theme: moto_comparo
+id: bootstrap_barrio_messages
+theme: bootstrap_barrio
 region: header
 weight: 0
 provider: null

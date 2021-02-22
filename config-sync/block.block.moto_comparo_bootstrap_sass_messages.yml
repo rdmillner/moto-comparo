@@ -1,15 +1,15 @@
-uuid: 41b7c2f1-ec8a-4680-a5e6-8a63f4c46e0c
+uuid: c623b0da-9358-4a03-8fca-d6d6a2d8eeee
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - bartik
+    - moto_comparo_bootstrap_sass
 _core:
   default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
-id: bartik_messages
-theme: bartik
+id: moto_comparo_bootstrap_sass_messages
+theme: moto_comparo_bootstrap_sass
 region: highlighted
 weight: 0
 provider: null

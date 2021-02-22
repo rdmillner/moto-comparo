@@ -1,4 +1,4 @@
-uuid: 6879b0b7-f43b-4630-9bb9-5022e3da1c87
+uuid: d3a87785-904b-4a44-a9fc-46c88a6460d5
 langcode: en
 status: false
 dependencies:
@@ -7,11 +7,11 @@ dependencies:
   module:
     - system
   theme:
-    - moto_comparo
+    - moto_comparo_bootstrap_sass
 _core:
   default_config_hash: 8a31Ywc1t2zlddGd3bmDrFMefWqgSK2E02ceFdr-bfc
-id: moto_comparo_account_menu
-theme: moto_comparo
+id: moto_comparo_bootstrap_sass_account_menu
+theme: moto_comparo_bootstrap_sass
 region: secondary_menu
 weight: 0
 provider: null
