@@ -1,0 +1,33 @@
+//controls the styling of the motorcycle content type's teaser view
+.node--type-motorcycle {
+  .field__label {
+    font-weight: bold;
+  }
+  .field--type-entity-reference {
+    margin-bottom: 0;
+  }
+}
+.teaser-specs, .fieldset-wrapper {
+  column-count: 2;
+  div {
+    break-inside: avoid;
+  }
+}
+
+.motorcycle-teaser {
+  text-align: center;
+  a {
+    color: #000;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  .node__title {
+    margin-bottom: 0;
+    padding-top: 0;
+    font-size: 22px;
+  }
+  .node__content {
+    margin-top: 0;
+  }
+}

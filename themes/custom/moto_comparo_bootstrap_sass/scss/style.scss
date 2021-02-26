@@ -59,25 +59,8 @@ a {
     margin: 0 15px;
 }
 /* my customizations below here */
-.motorcycle-teaser-specs {
-  text-align: center;
-  .node__title {
-    margin-bottom: 0;
-    padding-top: 0;
-  }
-  .node__content {
-    margin-top: 0;
-  }
-  .teaser-specs {
-    column-count: 2;
-  }
-  .field__label {
-    font-weight: bold;
-  }
-  .field--type-entity-reference {
-    margin-bottom: 0;
-  }
-}
+@import "motorcycle";
+
 #CollapsingNavbar .block-moto-comparo-bootstrap-sass-main-menu {
   text-align: center;
 }
