@@ -71,13 +71,17 @@ third_party_settings:
       children:
         - field_engine_long
         - field_engine_cooling
+        - field_number_of_cylinders
         - field_displacement
         - field_bore
         - field_stroke
         - field_compression_ratio
+        - field_max_rpm
+        - field_horsepower
         - field_torque
+        - field_air_fuel_mixer
       parent_name: ''
-      weight: 4
+      weight: 7
       format_type: fieldset
       region: content
       format_settings:
@@ -95,8 +99,11 @@ third_party_settings:
         - field_overall_width
         - field_overall_height
         - field_ground_clearance
+        - field_payload
+        - field_trail
+        - field_rake
       parent_name: ''
-      weight: 5
+      weight: 6
       format_type: fieldset
       region: content
       format_settings:
@@ -117,7 +124,7 @@ third_party_settings:
         - field_front_tire_size
         - field_rear_tire_size
       parent_name: ''
-      weight: 6
+      weight: 8
       format_type: fieldset
       region: content
       format_settings:
@@ -125,6 +132,46 @@ third_party_settings:
         classes: ''
         description: ''
       label: Chassis
+    group_transmission:
+      children:
+        - field_final_drive
+        - field_number_of_gears
+        - field_clutch
+        - field_transmission_type
+      parent_name: ''
+      weight: 9
+      format_type: fieldset
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+      label: Transmission
+    group_fuel:
+      children:
+        - field_fuel_capacity
+        - field_fuel_reserve
+        - field_octane
+      parent_name: ''
+      weight: 10
+      format_type: fieldset
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+      label: Fuel
+    group_overview:
+      children: {  }
+      parent_name: ''
+      weight: 20
+      format_type: fieldset
+      region: hidden
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+      label: ''
 id: node.motorcycle.default
 targetEntityType: node
 bundle: motorcycle
@@ -138,21 +185,21 @@ content:
     type: list_default
     region: content
   field_air_fuel_mixer:
-    weight: 36
+    weight: 14
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_bore:
-    weight: 9
+    weight: 8
     label: above
     settings: {  }
     third_party_settings: {  }
     type: physical_measurement_default
     region: content
   field_category:
-    weight: 2
+    weight: 3
     label: above
     settings:
       link: true
@@ -168,7 +215,7 @@ content:
     type: string
     region: content
   field_colors:
-    weight: 9
+    weight: 4
     label: above
     settings:
       link_to_entity: false
@@ -176,7 +223,7 @@ content:
     type: string
     region: content
   field_compression_ratio:
-    weight: 11
+    weight: 10
     label: above
     settings:
       thousand_separator: ''
@@ -187,14 +234,14 @@ content:
     type: number_decimal
     region: content
   field_displacement:
-    weight: 8
+    weight: 7
     label: above
     settings: {  }
     third_party_settings: {  }
     type: physical_measurement_default
     region: content
   field_dry_weight:
-    weight: 25
+    weight: 12
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -262,7 +309,7 @@ content:
     type: string
     region: content
   field_fuel_capacity:
-    weight: 14
+    weight: 12
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -276,21 +323,21 @@ content:
     type: physical_measurement_default
     region: content
   field_ground_clearance:
-    weight: 32
+    weight: 19
     label: above
     settings: {  }
     third_party_settings: {  }
     type: physical_measurement_default
     region: content
   field_horsepower:
-    weight: 33
+    weight: 12
     label: above
     settings: {  }
     third_party_settings: {  }
     type: physical_measurement_default
     region: content
   field_make:
-    weight: 3
+    weight: 2
     label: above
     settings:
       link: true
@@ -298,7 +345,7 @@ content:
     type: entity_reference_label
     region: content
   field_max_rpm:
-    weight: 16
+    weight: 11
     label: above
     settings:
       thousand_separator: ''
@@ -306,6 +353,15 @@ content:
     third_party_settings: {  }
     type: number_integer
     region: content
+  field_number_of_cylinders:
+    type: number_integer
+    weight: 6
+    region: content
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
   field_number_of_gears:
     weight: 10
     label: above
@@ -316,28 +372,28 @@ content:
     type: number_integer
     region: content
   field_octane:
-    weight: 15
+    weight: 14
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_overall_height:
-    weight: 31
+    weight: 18
     label: above
     settings: {  }
     third_party_settings: {  }
     type: physical_measurement_default
     region: content
   field_overall_length:
-    weight: 29
+    weight: 16
     label: above
     settings: {  }
     third_party_settings: {  }
     type: physical_measurement_default
     region: content
   field_overall_width:
-    weight: 30
+    weight: 17
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -352,7 +408,7 @@ content:
     region: content
   field_pictures:
     type: slick_media
-    weight: 37
+    weight: 14
     label: above
     settings:
       style: ''
@@ -414,7 +470,7 @@ content:
     third_party_settings: {  }
     region: content
   field_rake:
-    weight: 12
+    weight: 22
     label: above
     settings:
       thousand_separator: ''
@@ -456,14 +512,14 @@ content:
       link_to_entity: false
     third_party_settings: {  }
   field_seat_height:
-    weight: 27
+    weight: 14
     label: above
     settings: {  }
     third_party_settings: {  }
     type: physical_measurement_default
     region: content
   field_spec_sheet:
-    weight: 35
+    weight: 5
     label: above
     settings:
       use_description_as_link_text: true
@@ -471,21 +527,21 @@ content:
     type: file_default
     region: content
   field_stroke:
-    weight: 10
+    weight: 9
     label: above
     settings: {  }
     third_party_settings: {  }
     type: physical_measurement_default
     region: content
   field_torque:
-    weight: 34
+    weight: 13
     label: above
     settings: {  }
     third_party_settings: {  }
     type: physical_measurement_default
     region: content
   field_trail:
-    weight: 11
+    weight: 21
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -506,14 +562,14 @@ content:
     type: list_default
     region: content
   field_wet_weight:
-    weight: 26
+    weight: 13
     label: above
     settings: {  }
     third_party_settings: {  }
     type: physical_measurement_default
     region: content
   field_wheelbase:
-    weight: 28
+    weight: 15
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -530,5 +586,4 @@ hidden:
   field_fuel_mix: true
   field_model: true
   field_model_year: true
-  field_number_of_cylinders: true
   field_transmission: true

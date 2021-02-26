@@ -18,7 +18,8 @@ let gulp = require('gulp'),
 			propList: ['font', 'font-size', 'line-height', 'letter-spacing', '*margin*', '*padding*'],
 			mediaQuery: true
 		})
-  ];
+  ],
+  shell = require('gulp-shell');
 
 const paths = {
   scss: {
@@ -81,7 +82,15 @@ function serve () {
     proxy: 'localhost',
   })
 
-  gulp.watch([paths.scss.watch, paths.scss.bootstrap], styles).on('change', browserSync.reload)
+  gulp.watch([paths.scss.watch, paths.scss.bootstrap], clearCache, styles).on('change', browserSync.reload)
+}
+
+// Use Drush to clear Drupal cache.
+function clearCache (done) {
+  shell.task([
+    'drush cr'
+  ]),
+  done();
 }
 
 const build = gulp.series(styles, gulp.parallel(js, serve))
