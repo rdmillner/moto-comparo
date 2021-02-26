@@ -1,0 +1,22 @@
+uuid: 62833477-d892-4825-9110-70ca2b70fc26
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - moto_comparo_bootstrap_sass
+_core:
+  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+id: moto_comparo_bootstrap_sass_breadcrumbs
+theme: moto_comparo_bootstrap_sass
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }

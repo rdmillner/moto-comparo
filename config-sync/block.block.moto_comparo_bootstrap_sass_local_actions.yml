@@ -1,0 +1,20 @@
+uuid: 2215dead-ac92-4242-a34d-54dd849ecef9
+langcode: en
+status: true
+dependencies:
+  theme:
+    - moto_comparo_bootstrap_sass
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: moto_comparo_bootstrap_sass_local_actions
+theme: moto_comparo_bootstrap_sass
+region: content
+weight: -20
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

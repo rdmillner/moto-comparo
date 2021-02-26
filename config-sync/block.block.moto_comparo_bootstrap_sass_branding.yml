@@ -1,0 +1,25 @@
+uuid: 1c5ca770-1ec1-44a6-a165-5d4088477aa5
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - moto_comparo_bootstrap_sass
+_core:
+  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
+id: moto_comparo_bootstrap_sass_branding
+theme: moto_comparo_bootstrap_sass
+region: header
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

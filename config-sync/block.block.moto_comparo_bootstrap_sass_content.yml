@@ -1,0 +1,22 @@
+uuid: 7f97eb1b-b3a3-4962-bc40-3af5bdd60253
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - moto_comparo_bootstrap_sass
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: moto_comparo_bootstrap_sass_content
+theme: moto_comparo_bootstrap_sass
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }
