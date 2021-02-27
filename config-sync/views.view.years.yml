@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - system.menu.footer
+    - system.menu.main
     - taxonomy.vocabulary.year
   module:
     - taxonomy
@@ -11,7 +11,7 @@ dependencies:
 id: years
 label: Years
 module: views
-description: ''
+description: "Allows users to easily view specific years of motorcycles covered by the site.\t"
 tag: ''
 base_table: taxonomy_term_field_data
 base_field: tid
@@ -196,7 +196,7 @@ display:
         parent: ''
         weight: 0
         context: '0'
-        menu_name: footer
+        menu_name: main
     cache_metadata:
       max-age: -1
       contexts:

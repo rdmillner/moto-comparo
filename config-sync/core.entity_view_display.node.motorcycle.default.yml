@@ -23,6 +23,7 @@ dependencies:
     - field.field.node.motorcycle.field_front_suspension_type
     - field.field.node.motorcycle.field_front_tire_size
     - field.field.node.motorcycle.field_fuel_capacity
+    - field.field.node.motorcycle.field_fuel_mix
     - field.field.node.motorcycle.field_fuel_reserve
     - field.field.node.motorcycle.field_ground_clearance
     - field.field.node.motorcycle.field_horsepower
@@ -48,6 +49,7 @@ dependencies:
     - field.field.node.motorcycle.field_stroke
     - field.field.node.motorcycle.field_torque
     - field.field.node.motorcycle.field_trail
+    - field.field.node.motorcycle.field_transmission
     - field.field.node.motorcycle.field_transmission_type
     - field.field.node.motorcycle.field_type
     - field.field.node.motorcycle.field_wet_weight
@@ -63,14 +65,16 @@ third_party_settings:
   field_group:
     group_engine:
       children:
+        - field_number_of_cylinders
         - field_engine_long
         - field_engine_cooling
-        - field_hp
-        - field_torque
         - field_displacement
         - field_bore
         - field_stroke
         - field_compression_ratio
+        - field_horsepower
+        - field_torque
+        - field_air_fuel_mixer
       parent_name: ''
       weight: 4
       format_type: fieldset
@@ -82,6 +86,9 @@ third_party_settings:
       label: Engine
     group_dimensions:
       children:
+        - field_trail
+        - field_rake
+        - field_payload
         - field_dry_weight
         - field_wet_weight
         - field_seat_height
@@ -120,6 +127,36 @@ third_party_settings:
         classes: ''
         description: ''
       label: Chassis
+    group_transmission:
+      children:
+        - field_final_drive
+        - field_number_of_gears
+        - field_max_rpm
+        - field_clutch
+        - field_transmission_type
+      parent_name: ''
+      weight: 20
+      format_type: fieldset
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+      label: Transmission
+    group_fuel:
+      children:
+        - field_fuel_reserve
+        - field_fuel_capacity
+        - field_octane
+      parent_name: ''
+      weight: 20
+      format_type: fieldset
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+      label: Fuel
 id: node.motorcycle.default
 targetEntityType: node
 bundle: motorcycle
@@ -163,7 +200,7 @@ content:
     type: string
     region: content
   field_colors:
-    weight: 9
+    weight: 4
     label: above
     settings:
       link_to_entity: false
@@ -301,6 +338,15 @@ content:
     third_party_settings: {  }
     type: number_integer
     region: content
+  field_number_of_cylinders:
+    type: number_integer
+    weight: 0
+    region: content
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
   field_number_of_gears:
     weight: 10
     label: above
@@ -348,7 +394,7 @@ content:
   field_pictures:
     type: entity_reference_entity_view
     weight: 37
-    label: above
+    label: hidden
     settings:
       view_mode: default
       link: false
@@ -404,7 +450,7 @@ content:
     type: physical_measurement_default
     region: content
   field_spec_sheet:
-    weight: 35
+    weight: 4
     label: above
     settings:
       use_description_as_link_text: true
@@ -471,5 +517,4 @@ hidden:
   field_fuel_mix: true
   field_model: true
   field_model_year: true
-  field_number_of_cylinders: true
   field_transmission: true
