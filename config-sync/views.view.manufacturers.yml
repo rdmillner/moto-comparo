@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - system.menu.main
+    - system.menu.footer
     - taxonomy.vocabulary.make
   module:
     - taxonomy
@@ -11,7 +11,7 @@ dependencies:
 id: manufacturers
 label: Manufacturers
 module: views
-description: 'List of all motorcycle manufacturers covered by the site.'
+description: ''
 tag: ''
 base_table: taxonomy_term_field_data
 base_field: tid
@@ -161,12 +161,13 @@ display:
       menu:
         type: normal
         title: Manufacturers
-        description: 'List of all motorcycle manufacturers covered by the site.'
+        description: 'List of all motorcycle manufacturers covered by the site. '
         expanded: false
         parent: ''
         weight: 0
         context: '0'
-        menu_name: main
+        menu_name: footer
+        enabled: true
     cache_metadata:
       max-age: -1
       contexts:

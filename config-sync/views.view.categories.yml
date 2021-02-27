@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - system.menu.main
+    - system.menu.footer
     - taxonomy.vocabulary.category
   module:
     - taxonomy
@@ -11,7 +11,7 @@ dependencies:
 id: categories
 label: Categories
 module: views
-description: 'List of all motorcycle categories covered by the site.'
+description: ''
 tag: ''
 base_table: taxonomy_term_field_data
 base_field: tid
@@ -191,12 +191,12 @@ display:
       menu:
         type: normal
         title: Categories
-        description: 'List of all motorcycle categories covered by the site.'
+        description: 'List of all motorcycle categories covered by the site. '
         expanded: false
         parent: ''
         weight: 0
         context: '0'
-        menu_name: main
+        menu_name: footer
     cache_metadata:
       max-age: -1
       contexts:
