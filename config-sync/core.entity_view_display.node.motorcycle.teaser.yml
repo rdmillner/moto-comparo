@@ -24,6 +24,7 @@ dependencies:
     - field.field.node.motorcycle.field_front_suspension_type
     - field.field.node.motorcycle.field_front_tire_size
     - field.field.node.motorcycle.field_fuel_capacity
+    - field.field.node.motorcycle.field_fuel_mix
     - field.field.node.motorcycle.field_fuel_reserve
     - field.field.node.motorcycle.field_ground_clearance
     - field.field.node.motorcycle.field_horsepower
@@ -47,15 +48,19 @@ dependencies:
     - field.field.node.motorcycle.field_seat_height
     - field.field.node.motorcycle.field_spec_sheet
     - field.field.node.motorcycle.field_stroke
+    - field.field.node.motorcycle.field_teaser_image
     - field.field.node.motorcycle.field_torque
     - field.field.node.motorcycle.field_trail
+    - field.field.node.motorcycle.field_transmission
     - field.field.node.motorcycle.field_transmission_type
     - field.field.node.motorcycle.field_type
     - field.field.node.motorcycle.field_wet_weight
     - field.field.node.motorcycle.field_wheelbase
+    - image.style.max_325x325
     - node.type.motorcycle
   module:
     - field_group
+    - media
     - options
     - physical
     - user
@@ -133,6 +138,15 @@ content:
     region: content
     label: above
     settings: {  }
+    third_party_settings: {  }
+  field_teaser_image:
+    type: media_thumbnail
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: max_325x325
+      image_link: ''
     third_party_settings: {  }
   field_wet_weight:
     type: physical_measurement_default
