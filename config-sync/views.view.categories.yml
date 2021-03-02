@@ -11,7 +11,7 @@ dependencies:
 id: categories
 label: Categories
 module: views
-description: 'List of all motorcycle categories covered by the site.'
+description: "Allows users to easily view specific categories of motorcycles covered by the site.\t"
 tag: ''
 base_table: taxonomy_term_field_data
 base_field: tid
@@ -191,7 +191,7 @@ display:
       menu:
         type: normal
         title: Categories
-        description: 'List of all motorcycle categories covered by the site.'
+        description: 'List of all motorcycle categories covered by the site. '
         expanded: false
         parent: ''
         weight: 0

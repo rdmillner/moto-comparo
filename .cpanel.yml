@@ -3,6 +3,7 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/motocomp/public_html/
     - chmod 777 ${DEPLOYPATH}sites/default/settings.php
+    - rm -rf ${DEPLOYPATH}config-sync/
     - /bin/cp -r * ${DEPLOYPATH}
     - cd ${DEPLOYPATH}
     - /opt/cpanel/composer/bin/composer install --prefer-dist --no-progress --no-suggest --optimize-autoloader

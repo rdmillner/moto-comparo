@@ -1,4 +1,4 @@
-uuid: 8e7ebc2b-b42b-4049-b111-a466359b333e
+uuid: 7c4bf140-98f2-4e99-a2d0-93690bce450b
 langcode: en
 status: false
 dependencies:
@@ -12,7 +12,7 @@ _core:
   default_config_hash: rH6PpAn7-RScha1rGkohGAYSSh_1OVeZzioJPzPw6O4
 id: moto_comparo_bootstrap_sass_tools
 theme: moto_comparo_bootstrap_sass
-region: sidebar_first
+region: header
 weight: 0
 provider: null
 plugin: 'system_menu_block:tools'

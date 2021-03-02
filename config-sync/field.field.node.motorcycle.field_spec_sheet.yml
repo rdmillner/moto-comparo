@@ -12,16 +12,16 @@ third_party_settings:
   filefield_paths:
     enabled: true
     file_path:
-      value: '[node:field_make]'
+      value: '[node:field_make:entity:name]'
       options:
         slashes: false
         pathauto: false
         transliterate: false
     redirect: false
-    retroactive_update: false
-    active_updating: false
+    retroactive_update: true
+    active_updating: true
     file_name:
-      value: '[node:field_model_year]-[node:field_model]-specs.[file:ffp-extension-original]'
+      value: '[node:field_model_year:value]-[node:field_model:entity:name]-specs.[file:ffp-extension-original]'
       options:
         slashes: false
         pathauto: false

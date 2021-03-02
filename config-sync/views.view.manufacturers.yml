@@ -11,7 +11,7 @@ dependencies:
 id: manufacturers
 label: Manufacturers
 module: views
-description: 'List of all motorcycle manufacturers covered by the site.'
+description: "Allows users to easily view specific manufacturers of motorcycles covered by the site.\t"
 tag: ''
 base_table: taxonomy_term_field_data
 base_field: tid
@@ -161,7 +161,7 @@ display:
       menu:
         type: normal
         title: Manufacturers
-        description: 'List of all motorcycle manufacturers covered by the site.'
+        description: 'List of all motorcycle manufacturers covered by the site. '
         expanded: false
         parent: ''
         weight: 0
