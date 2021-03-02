@@ -409,7 +409,6 @@ content:
     label: hidden
     settings:
       style: ''
-      vanilla: true
       optionset: default
       optionset_thumbnail: ''
       skin: default
@@ -431,12 +430,13 @@ content:
       link: ''
       layout: ''
       class: ''
+      caption:
+        alt: alt
+        title: '0'
       cache: 0
       current_view_mode: default
+      vanilla: false
       background: false
-      caption:
-        title: '0'
-        alt: '0'
       preserve_keys: false
       override: false
       overridables:
