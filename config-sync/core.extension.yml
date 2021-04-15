@@ -1,5 +1,6 @@
 module:
   admin_toolbar: 0
+  auditfiles: 0
   auto_entitylabel: 0
   automated_cron: 0
   big_pipe: 0
@@ -30,6 +31,8 @@ module:
   imageapi_optimize_tinypng: 0
   jquery_ui: 0
   jquery_ui_accordion: 0
+  jsonapi: 0
+  jsonapi_extras: 0
   layout_discovery: 0
   link: 0
   media: 0
@@ -50,6 +53,7 @@ module:
   replicate_ui: 0
   responsive_image: 0
   search: 0
+  serialization: 0
   shortcut: 0
   slick: 0
   sophron: 0
@@ -60,6 +64,7 @@ module:
   text: 0
   token: 0
   toolbar: 0
+  typed_data: 0
   update: 0
   user: 0
   views_ui: 0
