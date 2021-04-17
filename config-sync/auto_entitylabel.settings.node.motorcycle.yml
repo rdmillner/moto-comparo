@@ -1,6 +1,0 @@
-status: 1
-pattern: '[node:field_model_year] [node:field_make] [node:field_model]'
-escape: false
-dependencies:
-  config:
-    - node.type.motorcycle

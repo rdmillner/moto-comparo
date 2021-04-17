@@ -1,8 +1,0 @@
-uuid: 65d46ee7-54c5-4114-9f3e-64aec09e0fa8
-langcode: en
-status: true
-dependencies: {  }
-name: Year
-vid: year
-description: 'Year the motorcycle was made.'
-weight: 0

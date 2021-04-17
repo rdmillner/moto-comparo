@@ -1,8 +1,0 @@
-uuid: 9cff65bb-0ddb-4b2c-954d-de950dee98db
-langcode: en
-status: true
-dependencies: {  }
-name: Category
-vid: category
-description: 'Which category does the motorcycle belong in?'
-weight: 0

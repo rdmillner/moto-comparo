@@ -1,8 +1,0 @@
-# Schema for the configuration files of the Moto Comparo theme.
-moto_comparo.settings:
-  type: theme_settings
-  label: 'Moto Comparo settings'
-  mapping:
-    font_size:
-      type: integer
-      label: Font size
