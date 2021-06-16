@@ -16,6 +16,7 @@
     ],
     "require": {
         "composer/installers": "^1.9",
+        "cweagans/composer-patches": "^1.7",
         "drupal/core-composer-scaffold": "^9.1",
         "drupal/core-project-message": "^9.1",
         "drupal/core-recommended": "^9.1",
@@ -86,6 +87,11 @@
                 "  * Remove the plugin that prints this message:",
                 "      composer remove drupal/core-project-message"
             ]
+          },
+          "patches": {
+            "drupal/physical": {
+              "Adding fields for Torque and Power": "patches/moto-comparo-physical-tweaks.patch"
+          }
         }
     }
 }

@@ -1,3 +1,9 @@
 ---
 deployment:
   tasks:
+    - export DRUPALPATH=/home/motocomp/public_html/admin/
+    - cp -r ~/repositories/moto-comparo/drupal/* ${DRUPALPATH}
+    - cd ${DRUPALPATH}
+    - composer install --prefer-dist --no-progress --no-dev --optimize-autoloader
+    - drush deploy -v -y
+    - rm -rf config-sync
