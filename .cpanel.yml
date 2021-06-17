@@ -5,5 +5,5 @@ deployment:
     - cp ~/repositories/moto-comparo/drupal/composer.lock ${DRUPALPATH}
     - cp -r ~/repositories/moto-comparo/drupal/patches ${DRUPALPATH}
     - cd ${DRUPALPATH}
-    - composer install --prefer-dist --no-progress --no-dev --optimize-autoloader
+    - /opt/cpanel/composer/bin/composer install --prefer-dist --no-progress --no-dev --optimize-autoloader
     - drush deploy -v -y
