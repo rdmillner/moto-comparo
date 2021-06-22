@@ -1,0 +1,22 @@
+uuid: b66478b7-9de5-4860-a122-e2ab80cacea5
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: motorcycle
+label: Motorcycle
+type: 'canonical_entities:node'
+pattern: '[node:field_manufacturer]/[node:field_year]-[node:field_model]'
+selection_criteria:
+  ddc5ba2d-3a55-4f35-ade7-7fd07798248b:
+    id: node_type
+    bundles:
+      motorcycle: motorcycle
+    negate: false
+    context_mapping:
+      node: node
+    uuid: ddc5ba2d-3a55-4f35-ade7-7fd07798248b
+selection_logic: and
+weight: -5
+relationships: {  }
