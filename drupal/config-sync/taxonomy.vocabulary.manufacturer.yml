@@ -1,0 +1,8 @@
+uuid: 0557bc71-b4c8-49cd-baa7-2e7d5a543921
+langcode: en
+status: true
+dependencies: {  }
+name: Manufacturer
+vid: manufacturer
+description: 'Vocabulary for the different motorcycle manufacturers.'
+weight: 0

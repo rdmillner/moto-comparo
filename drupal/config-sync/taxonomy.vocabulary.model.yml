@@ -1,0 +1,8 @@
+uuid: da0da433-cae5-414e-b2e4-f714a01ceb33
+langcode: en
+status: true
+dependencies: {  }
+name: Model
+vid: model
+description: 'Vocabulary for model names.'
+weight: 0

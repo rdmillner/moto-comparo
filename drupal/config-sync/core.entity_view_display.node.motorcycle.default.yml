@@ -1,0 +1,56 @@
+uuid: eccf0292-505d-4fc3-8a78-f8ebba17d0e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.motorcycle.body
+    - field.field.node.motorcycle.field_manufacturer
+    - field.field.node.motorcycle.field_model
+    - field.field.node.motorcycle.field_year
+    - node.type.motorcycle
+  module:
+    - text
+    - user
+id: node.motorcycle.default
+targetEntityType: node
+bundle: motorcycle
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_manufacturer:
+    weight: 103
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_model:
+    weight: 105
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_year:
+    weight: 104
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

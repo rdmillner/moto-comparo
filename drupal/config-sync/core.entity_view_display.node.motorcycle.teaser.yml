@@ -1,0 +1,36 @@
+uuid: ec09a68c-6246-46be-8bdd-7a9cc416db7e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.motorcycle.body
+    - field.field.node.motorcycle.field_manufacturer
+    - field.field.node.motorcycle.field_model
+    - field.field.node.motorcycle.field_year
+    - node.type.motorcycle
+  module:
+    - text
+    - user
+id: node.motorcycle.teaser
+targetEntityType: node
+bundle: motorcycle
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_manufacturer: true
+  field_model: true
+  field_year: true

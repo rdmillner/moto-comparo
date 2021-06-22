@@ -1,0 +1,23 @@
+uuid: 6bf8aefe-39f1-4f07-9a89-58858a0c9119
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_year
+    - node.type.motorcycle
+id: node.motorcycle.field_year
+field_name: field_year
+entity_type: node
+bundle: motorcycle
+label: Year
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer
