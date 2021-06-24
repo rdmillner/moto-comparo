@@ -6,10 +6,13 @@ dependencies:
     - field.field.node.motorcycle.body
     - field.field.node.motorcycle.field_manufacturer
     - field.field.node.motorcycle.field_model
+    - field.field.node.motorcycle.field_weight
+    - field.field.node.motorcycle.field_weight_type
     - field.field.node.motorcycle.field_year
     - node.type.motorcycle
   module:
     - path
+    - physical
 id: node.motorcycle.default
 targetEntityType: node
 bundle: motorcycle
@@ -40,6 +43,20 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
+    region: content
+  field_weight:
+    weight: 27
+    settings:
+      default_unit: ''
+      allow_unit_change: true
+    third_party_settings: {  }
+    type: physical_measurement_default
+    region: content
+  field_weight_type:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_year:
     weight: 8

@@ -7,6 +7,8 @@ dependencies:
     - field.field.node.motorcycle.body
     - field.field.node.motorcycle.field_manufacturer
     - field.field.node.motorcycle.field_model
+    - field.field.node.motorcycle.field_weight
+    - field.field.node.motorcycle.field_weight_type
     - field.field.node.motorcycle.field_year
     - node.type.motorcycle
   module:
@@ -33,4 +35,6 @@ content:
 hidden:
   field_manufacturer: true
   field_model: true
+  field_weight: true
+  field_weight_type: true
   field_year: true

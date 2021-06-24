@@ -35,6 +35,7 @@ module:
   path_alias: 0
   physical: 0
   rdf: 0
+  replicate: 0
   search: 0
   serialization: 0
   system: 0

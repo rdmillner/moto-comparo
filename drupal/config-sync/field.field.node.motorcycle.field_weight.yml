@@ -1,0 +1,21 @@
+uuid: 79eec0c9-7ec6-4b03-96fa-ea39fe8fc811
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_weight
+    - node.type.motorcycle
+  module:
+    - physical
+id: node.motorcycle.field_weight
+field_name: field_weight
+entity_type: node
+bundle: motorcycle
+label: Weight
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: physical_measurement

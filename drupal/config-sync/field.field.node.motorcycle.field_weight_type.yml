@@ -1,0 +1,23 @@
+uuid: 5b9dbb6c-7c50-469c-b7d6-4a6524dfc1b6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_weight_type
+    - node.type.motorcycle
+  module:
+    - options
+id: node.motorcycle.field_weight_type
+field_name: field_weight_type
+entity_type: node
+bundle: motorcycle
+label: 'Weight Type'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: wet
+default_value_callback: ''
+settings: {  }
+field_type: list_string

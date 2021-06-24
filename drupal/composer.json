@@ -25,6 +25,7 @@
         "drupal/jsonapi_extras": "^3.18",
         "drupal/pathauto": "^1.8",
         "drupal/physical": "^1.1",
+        "drupal/replicate": "^1.0",
         "drupal/typed_data": "^1.0@alpha",
         "drush/drush": "^10.5"
     },
