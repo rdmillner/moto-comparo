@@ -2,6 +2,7 @@
 deployment:
   tasks:
     - export DRUPALPATH=/home/motocomp/public_html/admin/
+    - cp ~/repositories/moto-comparo/drupal/composer.json ${DRUPALPATH}
     - cp ~/repositories/moto-comparo/drupal/composer.lock ${DRUPALPATH}
     - cp -r ~/repositories/moto-comparo/drupal/patches ${DRUPALPATH}
     - cd ${DRUPALPATH}

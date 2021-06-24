@@ -38,3 +38,4 @@ hidden:
   field_weight: true
   field_weight_type: true
   field_year: true
+  langcode: true
