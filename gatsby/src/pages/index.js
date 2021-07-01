@@ -2,17 +2,21 @@ import React from 'react'
 import { graphql, Link } from 'gatsby'
 
 const MotorcyclePage = ({data}) => {
-    return (
-            data.allNodeMotorcycle.edges.map((edge) =>
-            <div key={edge.node.id}>
-                <div className='teaser wrapper'>
-                    <h2>{edge.node.title}</h2>
-                    <p>Weight:
-                     {edge.node.field_weight} ({edge.node.field_weight_type})</p>
-                </div>
+  return (
+      data.allNodeMotorcycle.edges.map((edge) =>
+        <div key={edge.node.id}>
+          <div className='teaser wrapper'>
+            <h2>{edge.node.title}</h2>
+              <p>Weight:
+                {(JSON.parse(JSON.stringify(edge.node.field_weight.number)))}
+                {JSON.parse(JSON.stringify(edge.node.field_weight.unit))}
+                ({JSON.parse(JSON.stringify(edge.node.field_weight_type))})
+              </p>
+              <Link to="https://google.com">Learn more...</Link>
             </div>
-            )
-        )
+        </div>
+      )
+  )
 }
 
 export const query = graphql`
