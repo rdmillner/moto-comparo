@@ -10,6 +10,7 @@ const Motorcycle = ({ data }) => {
  return (
 //   <Layout>
      <h1>{post.title}</h1>
+     //{post.field_weight_type}
 //   </Layout>
  );
 };
@@ -23,6 +24,12 @@ export const query = graphql`
    nodeMotorcycle(id: { eq: $MotorcycleId }) {
      id
      title
+     field_year
+     field_weight_type
+     field_weight {
+       number
+       unit
+     }
    }
  }
 `;

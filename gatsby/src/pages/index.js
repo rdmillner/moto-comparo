@@ -12,7 +12,7 @@ const MotorcyclePage = ({data}) => {
                 {JSON.parse(JSON.stringify(edge.node.field_weight.unit))}
                 ({JSON.parse(JSON.stringify(edge.node.field_weight_type))})
               </p>
-              <Link to="https://google.com">Learn more...</Link>
+              <Link to="{}">Learn more...</Link>
             </div>
         </div>
       )
