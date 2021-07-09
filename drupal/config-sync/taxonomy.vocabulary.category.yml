@@ -1,0 +1,8 @@
+uuid: 6100c35e-427c-4f9c-ae94-c4e59819f760
+langcode: en
+status: true
+dependencies: {  }
+name: Category
+vid: category
+description: 'Contains all the different categories of motorcycles'
+weight: 0

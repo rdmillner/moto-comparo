@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.user.user.user_picture
-    - image.style.thumbnail
   module:
     - image
     - path
@@ -38,9 +37,8 @@ content:
     type: image_image
     settings:
       progress_indicator: throbber
-      preview_image_style: thumbnail
+      preview_image_style: ''
     third_party_settings: {  }
     weight: -1
     region: content
-hidden:
-  langcode: true
+hidden: {  }

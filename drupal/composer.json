@@ -21,6 +21,7 @@
         "drupal/core-composer-scaffold": "^9.1",
         "drupal/core-project-message": "^9.1",
         "drupal/core-recommended": "^9.1",
+        "drupal/filefield_paths": "^1.0@beta",
         "drupal/graphql": "^4.1",
         "drupal/jsonapi_extras": "^3.18",
         "drupal/pathauto": "^1.8",

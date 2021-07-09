@@ -4,13 +4,22 @@ status: true
 dependencies:
   config:
     - field.field.node.motorcycle.body
+    - field.field.node.motorcycle.field_abs
+    - field.field.node.motorcycle.field_category
+    - field.field.node.motorcycle.field_displacement
+    - field.field.node.motorcycle.field_engine_type
+    - field.field.node.motorcycle.field_images
     - field.field.node.motorcycle.field_manufacturer
     - field.field.node.motorcycle.field_model
+    - field.field.node.motorcycle.field_seat_height
+    - field.field.node.motorcycle.field_spec_sheet
     - field.field.node.motorcycle.field_weight
     - field.field.node.motorcycle.field_weight_type
     - field.field.node.motorcycle.field_year
     - node.type.motorcycle
   module:
+    - file
+    - image
     - path
     - physical
 id: node.motorcycle.default
@@ -24,6 +33,48 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_abs:
+    weight: 29
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_category:
+    weight: 32
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_displacement:
+    weight: 28
+    settings:
+      default_unit: ''
+      allow_unit_change: true
+    third_party_settings: {  }
+    type: physical_measurement_default
+    region: content
+  field_engine_type:
+    weight: 33
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_images:
+    weight: 30
+    settings:
+      progress_indicator: throbber
+      preview_image_style: ''
+    third_party_settings: {  }
+    type: image_image
+    region: content
   field_manufacturer:
     weight: 7
     settings:
@@ -43,6 +94,21 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
+    region: content
+  field_seat_height:
+    weight: 31
+    settings:
+      default_unit: ''
+      allow_unit_change: true
+    third_party_settings: {  }
+    type: physical_measurement_default
+    region: content
+  field_spec_sheet:
+    weight: 34
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
     region: content
   field_weight:
     weight: 27
@@ -65,13 +131,6 @@ content:
     third_party_settings: {  }
     type: number
     region: content
-  langcode:
-    type: language_select
-    weight: 2
-    region: content
-    settings:
-      include_locked: true
-    third_party_settings: {  }
   path:
     type: path
     weight: 5

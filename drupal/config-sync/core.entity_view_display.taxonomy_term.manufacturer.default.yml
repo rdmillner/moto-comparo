@@ -1,0 +1,32 @@
+uuid: 42c5dd75-9686-41d9-96f4-7b92cf656de5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.manufacturer.field_logo
+    - taxonomy.vocabulary.manufacturer
+  module:
+    - image
+    - text
+id: taxonomy_term.manufacturer.default
+targetEntityType: taxonomy_term
+bundle: manufacturer
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_logo:
+    weight: 1
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden: {  }

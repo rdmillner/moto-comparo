@@ -5,8 +5,15 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.motorcycle.body
+    - field.field.node.motorcycle.field_abs
+    - field.field.node.motorcycle.field_category
+    - field.field.node.motorcycle.field_displacement
+    - field.field.node.motorcycle.field_engine_type
+    - field.field.node.motorcycle.field_images
     - field.field.node.motorcycle.field_manufacturer
     - field.field.node.motorcycle.field_model
+    - field.field.node.motorcycle.field_seat_height
+    - field.field.node.motorcycle.field_spec_sheet
     - field.field.node.motorcycle.field_weight
     - field.field.node.motorcycle.field_weight_type
     - field.field.node.motorcycle.field_year
@@ -33,9 +40,15 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  field_abs: true
+  field_category: true
+  field_displacement: true
+  field_engine_type: true
+  field_images: true
   field_manufacturer: true
   field_model: true
+  field_seat_height: true
+  field_spec_sheet: true
   field_weight: true
   field_weight_type: true
   field_year: true
-  langcode: true
