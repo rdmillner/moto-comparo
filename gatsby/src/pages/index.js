@@ -1,33 +1,35 @@
-import React from 'react'
-import { graphql, Link } from 'gatsby'
+import * as React from 'react'
+import { graphql } from 'gatsby'
+import PropTypes from 'prop-types';
+import Layout from '../components/layout'
+import { GatsbyImage, StaticImage, getImage } from "gatsby-plugin-image"
 
-const MotorcyclePage = ({data}) => {
+const IndexPage = ({ data }) => {
+
   return (
-      data.allNodeMotorcycle.edges.map((edge) =>
-        <div key={edge.node.id}>
-          <div className='teaser wrapper'>
-            <h2>{edge.node.title}</h2>
-              <p>Weight:
-                {(JSON.parse(JSON.stringify(edge.node.field_weight.number)))}
-                {JSON.parse(JSON.stringify(edge.node.field_weight.unit))}
-                ({JSON.parse(JSON.stringify(edge.node.field_weight_type))})
-              </p>
-              <Link to="{}">Learn more...</Link>
-            </div>
-        </div>
-      )
+    <Layout pageTitle="Home">
+      <p><strong>{data.allNodeMotorcycle.totalCount}</strong> motorcycles in the database.</p>
+      <p>All motorcycles:</p>
+      <div>
+        {data.allNodeMotorcycle.edges.map(({ node }) => (
+          <div key={node.id}>
+            <h3>{node.title}</h3>
+            <p><strong>Displacement: </strong>{Math.trunc(node.field_displacement.number)}{node.field_displacement.unit}</p>
+            <p><strong>Weight: </strong>{Math.trunc(node.field_weight.number)}{node.field_weight.unit} ({node.field_weight_type})</p>
+            <p><strong>ABS: </strong>{node.field_abs}</p>
+            <p><strong>Category: </strong>{JSON.parse(JSON.stringify(node.relationships.field_category['0'].name))}</p>
+            {JSON.stringify(node.relationships.field_images)}
+          </div>
+        ))}
+      </div>
+    </Layout>
   )
 }
 
 export const query = graphql`
-  query MotorcyclePage {
-    allNodeMotorcycle(
-      sort: {
-        fields: [field_year, title],
-        order: DESC
-      }
-    )
-    {
+  query {
+    allNodeMotorcycle(sort: {fields: [field_year, title], order: ASC}) {
+      totalCount
       edges {
         node {
           title
@@ -41,10 +43,34 @@ export const query = graphql`
             number
             unit
           }
+          field_displacement {
+            number
+            unit
+          }
+          field_abs
+          field_seat_height {
+            number
+            unit
+          }
+          field_images {
+            alt
+          }
+          relationships {
+            field_category {
+              name
+            }
+            field_images {
+              localFile {
+                childrenImageSharp {
+                  gatsbyImageData(width: 200, formats: [AUTO, WEBP, AVIF], placeholder: TRACED_SVG)
+                }
+              }
+            }
+          }
         }
       }
-      totalCount
     }
   }
 `
-export default MotorcyclePage
+
+export default IndexPage

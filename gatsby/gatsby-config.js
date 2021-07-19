@@ -11,7 +11,6 @@ module.exports = {
       },
     },
     "gatsby-plugin-sass",
-    "gatsby-plugin-image",
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {
@@ -26,15 +25,8 @@ module.exports = {
         icon: "src/images/icon.png",
       },
     },
+    "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "images",
-        path: "./src/images/",
-      },
-      __key: "images",
-    },
   ],
 };
