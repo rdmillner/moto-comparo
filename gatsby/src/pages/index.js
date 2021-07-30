@@ -14,14 +14,17 @@ const IndexPage = ({ data }) => {
         {data.allNodeMotorcycle.edges.map(({ node }) => (
           <div key={node.id}>
             <h3>{node.title}</h3>
+            <GatsbyImage image={getImage(node.relationships.field_images['0'].localFile.childrenImageSharp['0'])} alt="node.field_images.alt" />
             <p><strong>Displacement: </strong>{Math.trunc(node.field_displacement.number)}{node.field_displacement.unit}</p>
             <p><strong>Weight: </strong>{Math.trunc(node.field_weight.number)}{node.field_weight.unit} ({node.field_weight_type})</p>
             <p><strong>ABS: </strong>{node.field_abs}</p>
             <p><strong>Category: </strong>{JSON.parse(JSON.stringify(node.relationships.field_category['0'].name))}</p>
-            {JSON.stringify(node.relationships.field_images)}
+            {/* console.log(JSON.parse(JSON.stringify(node.relationships.field_images['0'].localFile))) */}
+            {/* console.log(getImage(node.relationships.field_images['0'].localFile.childrenImageSharp['0']))  */}
           </div>
         ))}
       </div>
+      <pre>{JSON.stringify(data, null, 4)}</pre>
     </Layout>
   )
 }
@@ -62,6 +65,7 @@ export const query = graphql`
             field_images {
               localFile {
                 childrenImageSharp {
+                  id
                   gatsbyImageData(width: 200, formats: [AUTO, WEBP, AVIF], placeholder: TRACED_SVG)
                 }
               }
