@@ -1,17 +1,21 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { graphql } from 'gatsby';
+import React from "react"
+import PropTypes from "prop-types"
+import { graphql } from "gatsby"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
-//import Layout from '../components/layout';
+import Layout from "../components/layout"
 
 const Motorcycle = ({ data }) => {
  const post = data.nodeMotorcycle;
 
  return (
-//   <Layout>
+   <Layout>
      <h1>{post.title}</h1>
-     //{post.field_weight_type}
-//   </Layout>
+     <GatsbyImage image={getImage(post.relationships.field_images['0'].localFile.childrenImageSharp['0'])} alt="post.field_images.alt" />
+     <ul class="plainList">
+       <li><strong>Weight: </strong>{Math.trunc(post.field_weight.number)}{post.field_weight.unit} ({post.field_weight_type})</li>
+     </ul>
+   </Layout>
  );
 };
 
@@ -29,6 +33,22 @@ export const query = graphql`
      field_weight {
        number
        unit
+     }
+     field_images {
+       alt
+     }
+     relationships {
+       field_category {
+         name
+       }
+       field_images {
+         localFile {
+           childrenImageSharp {
+             id
+             gatsbyImageData(width: 300, formats: [AUTO, WEBP, AVIF], placeholder: TRACED_SVG)
+           }
+         }
+       }
      }
    }
  }

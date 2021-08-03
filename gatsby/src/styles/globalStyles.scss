@@ -1,0 +1,10 @@
+/* generic styles that can be used anywwhere on the site */
+.flexRow {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+.plainList {
+  list-style: none;
+  padding-left: 0;
+}
