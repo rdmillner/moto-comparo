@@ -1,5 +1,6 @@
 import * as React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
+import { Helmet } from "react-helmet"
 import "../styles/globalStyles.scss"
 import {
   container,
@@ -23,8 +24,11 @@ const Layout = ({ pageTitle, children }) => {
   `)
 
   return (
-    <main className={container}>
+    <>
+    <Helmet>
       <title>{pageTitle} | {data.site.siteMetadata.title}</title>
+    </Helmet>
+    <main className={container}>
       <p className={siteTitle}>{data.site.siteMetadata.title}</p>
       <nav>
         <ul className={navLinks}>
@@ -47,10 +51,11 @@ const Layout = ({ pageTitle, children }) => {
       </nav>
       <h1 className={heading}>{pageTitle}</h1>
       {children}
-      <footer className={footer}>
-        This is the footer.
-      </footer>
     </main>
+    <footer className={footer}>
+      MotoComparo
+    </footer>
+    </>
   )
 }
 

@@ -1,11 +1,16 @@
 /* scss file for the MotorcycleTeaser component */
-.teaser {
-  border: 1px solid grey;
+.container {
+  margin: 2px 3px;
+/*  border: 1px solid grey; */
+  padding: 0 5px;
 }
-h3 {
+.motorcyclename {
   margin-bottom: 0;
   text-align: center;
 }
-ul {
+.list {
   font-size: .8em;
+  list-style: none;
+  margin-top: 0;
+  padding-left: 0;
 }

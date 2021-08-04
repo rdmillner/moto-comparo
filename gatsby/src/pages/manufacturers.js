@@ -6,7 +6,6 @@ const MakesPage = ({ data }) => {
 
   return (
     <Layout pageTitle="Manufacturers">
-      <p>All manufacturers:</p>
       <div class="flexRow">
         {data.allTaxonomyTermManufacturer.edges.map(({ node }) => (
           <div key={node.id}>

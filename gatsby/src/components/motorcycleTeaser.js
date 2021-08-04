@@ -2,12 +2,22 @@ import * as React from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
-import "../styles/motorcycleTeaser.module.scss"
+import {
+  container,
+  motorcyclename,
+  list,
+} from "../styles/motorcycleTeaser.module.scss"
 
 export default function Header() {
   const data = useStaticQuery(graphql`
     query TeaserQuery {
-      allNodeMotorcycle {
+      allNodeMotorcycle(
+        sort: {
+          fields: [field_year, title],
+          order: DESC
+        }
+      )
+       {
         edges {
           node {
             title
@@ -41,7 +51,7 @@ export default function Header() {
                 localFile {
                   childrenImageSharp {
                     id
-                    gatsbyImageData(width: 300, formats: [AUTO, WEBP, AVIF], placeholder: TRACED_SVG)
+                    gatsbyImageData(height: 100, formats: [AVIF, WEBP, AUTO], placeholder: TRACED_SVG)
                   }
                 }
               }
@@ -54,10 +64,10 @@ export default function Header() {
   return (
     <>
       {data.allNodeMotorcycle.edges.map(({ node }) => (
-        <Link to={node.path.alias} class="teaser" key={node.id}>
-          <h3>{node.title}</h3>
+        <Link to={node.path.alias} className={container} key={node.id}>
+          <h3 className={motorcyclename}>{node.title}</h3>
           <GatsbyImage image={getImage(node.relationships.field_images['0'].localFile.childrenImageSharp['0'])} alt="node.field_images.alt" />
-          <ul class="plainList">
+          <ul className={list}>
             <li><strong>Displacement: </strong>{Math.trunc(node.field_displacement.number)}{node.field_displacement.unit}</li>
             <li><strong>Weight: </strong>{Math.trunc(node.field_weight.number)}{node.field_weight.unit} ({node.field_weight_type})</li>
             <li><strong>ABS: </strong>{node.field_abs}</li>

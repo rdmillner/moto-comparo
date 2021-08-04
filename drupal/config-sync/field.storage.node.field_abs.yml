@@ -23,6 +23,9 @@ settings:
     -
       value: switchable
       label: 'Yes (switchable)'
+    -
+      value: linked
+      label: 'Yes (linked)'
   allowed_values_function: ''
 module: options
 locked: false

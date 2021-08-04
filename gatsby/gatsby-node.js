@@ -3,7 +3,7 @@ const path = require('path');
 exports.createPages = async ({ actions, graphql }) => {
  const { createPage } = actions;
 
- const motorcycles = await graphql(`
+ const motorcyclePages = await graphql(`
    {
      allNodeMotorcycle {
        nodes {
@@ -17,7 +17,7 @@ exports.createPages = async ({ actions, graphql }) => {
    }
  `);
 
- motorcycles.data.allNodeMotorcycle.nodes.map(motorcycleData =>
+ motorcyclePages.data.allNodeMotorcycle.nodes.map(motorcycleData =>
    createPage({
      path: motorcycleData.path.alias,
      component: path.resolve(`src/templates/motorcycle.js`),

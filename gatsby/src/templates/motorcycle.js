@@ -9,10 +9,9 @@ const Motorcycle = ({ data }) => {
  const post = data.nodeMotorcycle;
 
  return (
-   <Layout>
-     <h1>{post.title}</h1>
+   <Layout pageTitle={post.title}>
      <GatsbyImage image={getImage(post.relationships.field_images['0'].localFile.childrenImageSharp['0'])} alt="post.field_images.alt" />
-     <ul class="plainList">
+     <ul className="plainList">
        <li><strong>Weight: </strong>{Math.trunc(post.field_weight.number)}{post.field_weight.unit} ({post.field_weight_type})</li>
      </ul>
    </Layout>

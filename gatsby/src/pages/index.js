@@ -8,8 +8,7 @@ const IndexPage = ({ data }) => {
   return (
     <Layout pageTitle="Home">
       <p><strong>{data.allNodeMotorcycle.totalCount}</strong> motorcycles in the database.</p>
-      <p>All motorcycles:</p>
-      <div class="flexRow">
+      <div className="flexRow">
         <MotorcycleTeaser />
       </div>
     </Layout>

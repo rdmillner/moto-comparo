@@ -4,10 +4,10 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: `gatsby-source-drupal`,
+      resolve: "gatsby-source-drupal",
       options: {
-        baseUrl: `https://admin.motocomparo.info/`,
-        apiBase: `jsonapi`, // optional, defaults to `jsonapi`
+        baseUrl: "https://admin.motocomparo.info/",
+        apiBase: "jsonapi",
       },
     },
     "gatsby-plugin-sass",
@@ -28,5 +28,6 @@ module.exports = {
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
+    "gatsby-plugin-react-helmet",
   ],
 };
