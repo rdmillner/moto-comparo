@@ -27,6 +27,11 @@ export const query = graphql`
     }
     relationships {
       field_category {
+        id
+        name
+      }
+      field_engine_type {
+        id
         name
       }
       field_images {

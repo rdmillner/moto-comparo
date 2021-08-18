@@ -53,7 +53,7 @@ const Layout = ({ pageTitle, children }) => {
       {children}
     </main>
     <footer className={footer}>
-      MotoComparo
+      <Link to="/">MotoComparo</Link>
     </footer>
     </>
   )
