@@ -1,0 +1,33 @@
+uuid: 0153ad67-c0b7-4d8e-8f73-09aa1e12006e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_gears
+field_name: field_gears
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: five
+      label: '5'
+    -
+      value: six
+      label: '6'
+    -
+      value: sixreverse
+      label: '6 (with reverse)'
+    -
+      value: fivereverse
+      label: '5 (with reverse)'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

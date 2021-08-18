@@ -1,0 +1,20 @@
+uuid: ac25a65f-e84a-4eeb-ac3d-13f86b543001
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - physical
+id: node.field_wheelbase
+field_name: field_wheelbase
+entity_type: node
+type: physical_measurement
+settings:
+  measurement_type: length
+module: physical
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

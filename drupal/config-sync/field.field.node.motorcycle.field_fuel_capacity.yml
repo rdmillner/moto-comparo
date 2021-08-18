@@ -1,0 +1,21 @@
+uuid: 3cdf37c9-65ed-43f8-a5bf-7dd3e0f2e72c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fuel_capacity
+    - node.type.motorcycle
+  module:
+    - physical
+id: node.motorcycle.field_fuel_capacity
+field_name: field_fuel_capacity
+entity_type: node
+bundle: motorcycle
+label: 'Fuel Capacity'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: physical_measurement

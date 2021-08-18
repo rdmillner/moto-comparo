@@ -1,0 +1,23 @@
+uuid: f3cd0f2a-bf85-4e25-9886-1789cacfa8e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_gears
+    - node.type.motorcycle
+  module:
+    - options
+id: node.motorcycle.field_gears
+field_name: field_gears
+entity_type: node
+bundle: motorcycle
+label: Gears
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: six
+default_value_callback: ''
+settings: {  }
+field_type: list_string

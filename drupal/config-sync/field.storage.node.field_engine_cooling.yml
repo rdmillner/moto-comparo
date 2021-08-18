@@ -1,0 +1,30 @@
+uuid: 67760bf5-8b4a-447b-a225-dc281c99061e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_engine_cooling
+field_name: field_engine_cooling
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: air
+      label: 'Air Cooled'
+    -
+      value: airoil
+      label: 'Air/Oil Cooled'
+    -
+      value: water
+      label: 'Water Cooled'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,30 @@
+uuid: baeab13a-4a3a-421b-9d94-df5f1e806ef8
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_final_drive
+field_name: field_final_drive
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: chain
+      label: Chain
+    -
+      value: belt
+      label: Belt
+    -
+      value: shaft
+      label: Shaft
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
