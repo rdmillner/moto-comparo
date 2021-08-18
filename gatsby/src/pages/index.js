@@ -7,17 +7,15 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout pageTitle="Home">
-      <p><strong>{data.allNodeMotorcycle.totalCount}</strong> motorcycles in the database.</p>
-      <div className="flexRow">
-        <MotorcycleTeaser />
-      </div>
+      <p>There are <strong>{data.allNodeMotorcycle.totalCount}</strong> motorcycles in the database.</p>
+      <MotorcycleTeaser />
     </Layout>
   )
 }
 
 export const query = graphql`
   query {
-    allNodeMotorcycle(sort: {fields: [field_year, title], order: ASC}) {
+    allNodeMotorcycle {
       totalCount
     }
   }

@@ -4,6 +4,12 @@
   flex-flow: row wrap;
   justify-content: flex-start;
 }
+.spacebetween {
+  justify-content: space-between;
+}
+.spacearound {
+  justify-content: space-around;
+}
 .plainList {
   list-style: none;
   margin-top: 0;

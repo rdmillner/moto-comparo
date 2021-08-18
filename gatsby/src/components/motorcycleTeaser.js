@@ -10,7 +10,7 @@ import {
 
 export default function Header() {
   const data = useStaticQuery(graphql`
-    query TeaserQuery {
+    query {
       allNodeMotorcycle(
         sort: {
           fields: [field_year, title],
@@ -20,49 +20,14 @@ export default function Header() {
        {
         edges {
           node {
-            title
-            id
-            path {
-              alias
-            }
-            field_year
-            field_weight_type
-            field_weight {
-              number
-              unit
-            }
-            field_displacement {
-              number
-              unit
-            }
-            field_abs
-            field_seat_height {
-              number
-              unit
-            }
-            field_images {
-              alt
-            }
-            relationships {
-              field_category {
-                name
-              }
-              field_images {
-                localFile {
-                  childrenImageSharp {
-                    id
-                    gatsbyImageData(height: 100, formats: [AVIF, WEBP, AUTO], placeholder: TRACED_SVG)
-                  }
-                }
-              }
-            }
+            ...TeaserFragment
           }
         }
       }
     }
   `)
   return (
-    <>
+    <div className="flexRow">
       {data.allNodeMotorcycle.edges.map(({ node }) => (
         <Link to={node.path.alias} className={container} key={node.id}>
           <h3 className={motorcyclename}>{node.title}</h3>
@@ -75,6 +40,6 @@ export default function Header() {
           </ul>
         </Link>
       ))}
-    </>
+    </div>
   )
 }
