@@ -5,9 +5,9 @@ import Layout from "../components/layout"
 const MakesPage = ({ data }) => {
 
   return (
-    <Layout pageTitle="Manufacturers">
+    <Layout pageTitle="Categories">
       <div className="flexRow spacearound">
-        {data.allTaxonomyTermManufacturer.edges.map(({ node }) => (
+        {data.allTaxonomyTermCategory.edges.map(({ node }) => (
           <Link href={node.name.toLowerCase()}>
             {node.name}
           </Link>
@@ -19,7 +19,7 @@ const MakesPage = ({ data }) => {
 
 export const query = graphql`
   query {
-    allTaxonomyTermManufacturer {
+    allTaxonomyTermCategory {
       edges {
         node {
           id

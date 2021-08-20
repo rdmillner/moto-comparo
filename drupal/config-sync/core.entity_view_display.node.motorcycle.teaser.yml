@@ -6,18 +6,26 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.motorcycle.body
     - field.field.node.motorcycle.field_abs
+    - field.field.node.motorcycle.field_bore
     - field.field.node.motorcycle.field_category
     - field.field.node.motorcycle.field_displacement
     - field.field.node.motorcycle.field_engine_cooling
     - field.field.node.motorcycle.field_engine_type
     - field.field.node.motorcycle.field_final_drive
     - field.field.node.motorcycle.field_fuel_capacity
+    - field.field.node.motorcycle.field_fuelling
     - field.field.node.motorcycle.field_gears
+    - field.field.node.motorcycle.field_horsepower
     - field.field.node.motorcycle.field_images
     - field.field.node.motorcycle.field_manufacturer
     - field.field.node.motorcycle.field_model
+    - field.field.node.motorcycle.field_rake
     - field.field.node.motorcycle.field_seat_height
     - field.field.node.motorcycle.field_spec_sheet
+    - field.field.node.motorcycle.field_stroke
+    - field.field.node.motorcycle.field_torque
+    - field.field.node.motorcycle.field_trail
+    - field.field.node.motorcycle.field_type
     - field.field.node.motorcycle.field_weight
     - field.field.node.motorcycle.field_weight_type
     - field.field.node.motorcycle.field_wheelbase
@@ -46,18 +54,26 @@ content:
     region: content
 hidden:
   field_abs: true
+  field_bore: true
   field_category: true
   field_displacement: true
   field_engine_cooling: true
   field_engine_type: true
   field_final_drive: true
   field_fuel_capacity: true
+  field_fuelling: true
   field_gears: true
+  field_horsepower: true
   field_images: true
   field_manufacturer: true
   field_model: true
+  field_rake: true
   field_seat_height: true
   field_spec_sheet: true
+  field_stroke: true
+  field_torque: true
+  field_trail: true
+  field_type: true
   field_weight: true
   field_weight_type: true
   field_wheelbase: true

@@ -1,0 +1,21 @@
+uuid: b062c952-01e0-4abe-95d8-05eab33267c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_trail
+    - node.type.motorcycle
+  module:
+    - physical
+id: node.motorcycle.field_trail
+field_name: field_trail
+entity_type: node
+bundle: motorcycle
+label: Trail
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: physical_measurement

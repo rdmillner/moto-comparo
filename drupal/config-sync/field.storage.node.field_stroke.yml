@@ -1,0 +1,20 @@
+uuid: 6a981605-41bd-4f8e-97b6-db10a31da5ad
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - physical
+id: node.field_stroke
+field_name: field_stroke
+entity_type: node
+type: physical_measurement
+settings:
+  measurement_type: length
+module: physical
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

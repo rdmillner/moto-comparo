@@ -1,0 +1,23 @@
+uuid: 9d03bb54-3c35-468a-8073-235cd13e3cb8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fuelling
+    - node.type.motorcycle
+  module:
+    - options
+id: node.motorcycle.field_fuelling
+field_name: field_fuelling
+entity_type: node
+bundle: motorcycle
+label: Fuelling
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: efi
+default_value_callback: ''
+settings: {  }
+field_type: list_string

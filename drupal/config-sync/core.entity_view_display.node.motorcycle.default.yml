@@ -5,18 +5,26 @@ dependencies:
   config:
     - field.field.node.motorcycle.body
     - field.field.node.motorcycle.field_abs
+    - field.field.node.motorcycle.field_bore
     - field.field.node.motorcycle.field_category
     - field.field.node.motorcycle.field_displacement
     - field.field.node.motorcycle.field_engine_cooling
     - field.field.node.motorcycle.field_engine_type
     - field.field.node.motorcycle.field_final_drive
     - field.field.node.motorcycle.field_fuel_capacity
+    - field.field.node.motorcycle.field_fuelling
     - field.field.node.motorcycle.field_gears
+    - field.field.node.motorcycle.field_horsepower
     - field.field.node.motorcycle.field_images
     - field.field.node.motorcycle.field_manufacturer
     - field.field.node.motorcycle.field_model
+    - field.field.node.motorcycle.field_rake
     - field.field.node.motorcycle.field_seat_height
     - field.field.node.motorcycle.field_spec_sheet
+    - field.field.node.motorcycle.field_stroke
+    - field.field.node.motorcycle.field_torque
+    - field.field.node.motorcycle.field_trail
+    - field.field.node.motorcycle.field_type
     - field.field.node.motorcycle.field_weight
     - field.field.node.motorcycle.field_weight_type
     - field.field.node.motorcycle.field_wheelbase
@@ -47,6 +55,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: list_default
+    region: content
+  field_bore:
+    weight: 122
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: physical_measurement_default
     region: content
   field_category:
     weight: 112
@@ -92,12 +107,26 @@ content:
     third_party_settings: {  }
     type: physical_measurement_default
     region: content
+  field_fuelling:
+    weight: 121
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
   field_gears:
     weight: 117
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
+    region: content
+  field_horsepower:
+    weight: 125
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: physical_measurement_default
     region: content
   field_images:
     weight: 110
@@ -124,6 +153,17 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: content
+  field_rake:
+    weight: 126
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
   field_seat_height:
     weight: 111
     label: above
@@ -138,6 +178,34 @@ content:
       use_description_as_link_text: true
     third_party_settings: {  }
     type: file_default
+    region: content
+  field_stroke:
+    weight: 123
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: physical_measurement_default
+    region: content
+  field_torque:
+    weight: 124
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: physical_measurement_default
+    region: content
+  field_trail:
+    weight: 127
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: physical_measurement_default
+    region: content
+  field_type:
+    weight: 120
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   field_weight:
     weight: 107

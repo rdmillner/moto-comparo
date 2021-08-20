@@ -1,5 +1,5 @@
 import * as React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
@@ -9,7 +9,12 @@ const Motorcycle = ({ data }) => {
 
  return (
    <Layout pageTitle={post.title}>
-     <GatsbyImage image={getImage(post.relationships.field_images['0'].localFile.childrenImageSharp['0'])} alt="post.field_images.alt" />
+    <nav aria-label="breadcrumb">
+      <Link to={"/" + post.relationships.field_manufacturer.name} title={"See all "+ post.relationships.field_manufacturer.name + " motorcycles"}>
+        Return to {post.relationships.field_manufacturer.name} manufacturer page.
+      </Link>
+    </nav>
+     <GatsbyImage image={getImage(post.relationships.field_images['0'].localFile.childrenImageSharp['0'])} alt={post.field_images.alt} />
      <ul>
        <li><strong>Displacement: </strong>{Math.trunc(post.field_displacement.number)}{post.field_displacement.unit}</li>
        <li><strong>Weight: </strong>{Math.trunc(post.field_weight.number)}{post.field_weight.unit} ({post.field_weight_type})</li>
@@ -24,6 +29,11 @@ export const query = graphql`
  query($MotorcycleId: String!) {
    nodeMotorcycle(id: { eq: $MotorcycleId }) {
      ...TeaserFragment
+     relationships {
+       field_manufacturer {
+         name
+       }
+     }
    }
  }
 `;

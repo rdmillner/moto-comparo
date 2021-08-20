@@ -10,9 +10,9 @@ import {
 
 import Layout from "../components/layout"
 
-const Manufacturer = ({ data }) => {
- const term = data.taxonomyTermManufacturer;
- const motorcycles = data.taxonomyTermManufacturer.relationships.node__motorcycle;
+const Category = ({ data }) => {
+ const term = data.taxonomyTermCategory;
+ const motorcycles = data.taxonomyTermCategory.relationships.node__motorcycle;
 
  return (
    <Layout pageTitle={term.name}>
@@ -21,6 +21,7 @@ const Manufacturer = ({ data }) => {
          <Link to={motorcycle.path.alias} className={container} key={motorcycle.id} title={'Learn more about the ' + motorcycle.title + '.'}>
            <h3 className={motorcyclename}>{motorcycle.title}</h3>
            <GatsbyImage image={getImage(motorcycle.relationships.field_images['0'].localFile.childrenImageSharp['0'])} alt={motorcycle.field_images['0'].alt} className={teaserImage} />
+           {motorcycle.field_images.alt}
            <ul className={list}>
              <li><span>Displacement: </span>{Math.trunc(motorcycle.field_displacement.number)}{motorcycle.field_displacement.unit}</li>
              <li><span>Weight: </span>{Math.trunc(motorcycle.field_weight.number)}{motorcycle.field_weight.unit} ({motorcycle.field_weight_type})</li>
@@ -37,8 +38,8 @@ const Manufacturer = ({ data }) => {
 };
 
 export const query = graphql`
- query($ManufacturerId: String!) {
-   taxonomyTermManufacturer(id: { eq: $ManufacturerId }) {
+ query($CategoryId: String!) {
+   taxonomyTermCategory(id: { eq: $CategoryId }) {
      id
      name
      relationships {
@@ -50,7 +51,7 @@ export const query = graphql`
            alias
          }
          relationships {
-           field_manufacturer {
+           field_category {
              id
              name
            }
@@ -61,4 +62,4 @@ export const query = graphql`
  }
 `;
 
-export default Manufacturer;
+export default Category;

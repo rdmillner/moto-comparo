@@ -6,6 +6,7 @@ import {
   container,
   motorcyclename,
   list,
+  teaserImage
 } from "../styles/allMotorcycleTeasers.module.scss"
 
 export default function Teaser() {
@@ -31,9 +32,9 @@ export default function Teaser() {
   return (
     <div className="flexRow">
       {data.allNodeMotorcycle.edges.map(({ node }) => (
-        <Link to={node.path.alias} className={container} key={node.id} title={node.title} title={'Learn more about the ' + node.title + '.'}>
+        <Link to={node.path.alias} className={container} key={node.id} title={'Learn more about the ' + node.title + '.'}>
           <h3 className={motorcyclename}>{node.title}</h3>
-          <GatsbyImage image={getImage(node.relationships.field_images['0'].localFile.childrenImageSharp['0'])} alt={node.field_images['0'].alt} />
+          <GatsbyImage image={getImage(node.relationships.field_images['0'].localFile.childrenImageSharp['0'])} alt={node.field_images['0'].alt} className={teaserImage} />
           {node.field_images.alt}
           <ul className={list}>
             <li><span>Displacement: </span>{Math.trunc(node.field_displacement.number)}{node.field_displacement.unit}</li>

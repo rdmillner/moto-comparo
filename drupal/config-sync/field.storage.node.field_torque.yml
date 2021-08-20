@@ -1,0 +1,20 @@
+uuid: a47de178-5041-4960-a83a-97e02ceb17a0
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - physical
+id: node.field_torque
+field_name: field_torque
+entity_type: node
+type: physical_measurement
+settings:
+  measurement_type: torque
+module: physical
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

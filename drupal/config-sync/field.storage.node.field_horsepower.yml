@@ -1,0 +1,20 @@
+uuid: 045847fd-ea49-42bf-a7b2-f274695ff9dd
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - physical
+id: node.field_horsepower
+field_name: field_horsepower
+entity_type: node
+type: physical_measurement
+settings:
+  measurement_type: power
+module: physical
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

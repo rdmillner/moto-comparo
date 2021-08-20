@@ -1,0 +1,23 @@
+uuid: 8d4bb28c-476b-4930-ad8c-f34606c64193
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_rake
+    - node.type.motorcycle
+id: node.motorcycle.field_rake
+field_name: field_rake
+entity_type: node
+bundle: motorcycle
+label: Rake
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

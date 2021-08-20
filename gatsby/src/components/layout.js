@@ -29,26 +29,32 @@ const Layout = ({ pageTitle, children }) => {
       <title>{pageTitle} | {data.site.siteMetadata.title}</title>
     </Helmet>
     <main className={container}>
-      <p className={siteTitle}>{data.site.siteMetadata.title}</p>
-      <nav>
-        <ul className={navLinks}>
-          <li className={navLinkItem}>
-            <Link to="/" className={navLinkText}>
-              Home
-            </Link>
-          </li>
-          <li className={navLinkItem}>
-            <Link to="/manufacturers" className={navLinkText}>
-              Manufacturers
-            </Link>
-          </li>
-          <li className={navLinkItem}>
-            <Link to="/about" className={navLinkText}>
-              About
-            </Link>
-          </li>
-        </ul>
-      </nav>
+    <nav className="navbar navbar-expand-lg sticky-top justify-content-center">
+      <p className={[siteTitle, "navbar-brand"]}>{data.site.siteMetadata.title}</p>
+      <ul className={navLinks}>
+        <li className={navLinkItem}>
+          <Link to="/" className={navLinkText}>
+            Home
+          </Link>
+        </li>
+        <li className={navLinkItem}>
+          <Link to="/manufacturers" className={navLinkText}>
+            Manufacturers
+          </Link>
+        </li>
+        <li className={navLinkItem}>
+          <Link to="/categories" className={navLinkText}>
+            Categories
+          </Link>
+        </li>
+        <li className={navLinkItem}>
+          <Link to="/about" className={navLinkText}>
+            About
+          </Link>
+        </li>
+      </ul>
+    </nav>
+
       <h1 className={heading}>{pageTitle}</h1>
       {children}
     </main>

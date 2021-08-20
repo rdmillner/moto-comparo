@@ -24,13 +24,21 @@ exports.createPages = async ({ actions, graphql }) => {
         }
       }
     }
+    categoryData: allTaxonomyTermCategory {
+      edges {
+        node {
+          id
+          name
+        }
+      }
+    }
 }
  `).then(result => {
 		if (result.errors) {
 			Promise.reject(result.errors);
 		}
 
-		// Create doc pages
+		// Create motorcycle pages
 		result.data.motorcycleData.edges.forEach(({ node }) => {
 			createPage({
 				path: node.path.alias,
@@ -40,7 +48,7 @@ exports.createPages = async ({ actions, graphql }) => {
         },
 			});
 		});
-		// Create blog pages
+    // Create manufacturer pages
 		result.data.manufacturerData.edges.forEach(({ node }) => {
 			createPage({
 				path: node.name.toLowerCase(),
@@ -48,6 +56,17 @@ exports.createPages = async ({ actions, graphql }) => {
         context: {
           ManufacturerId: node.id,
           ManufacturerName: node.name,
+        },
+			});
+		});
+    // Create category pages
+		result.data.categoryData.edges.forEach(({ node }) => {
+			createPage({
+				path: node.name.toLowerCase(),
+				component: path.resolve(`src/templates/category.js`),
+        context: {
+          CategoryId: node.id,
+          CategoryName: node.name,
         },
 			});
 		});

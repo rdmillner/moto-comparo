@@ -1,0 +1,30 @@
+uuid: 59d9d74e-caaf-4096-a78f-2e7a65aad160
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_fuelling
+field_name: field_fuelling
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: efi
+      label: 'Electronic Fuel Injection'
+    -
+      value: mfi
+      label: 'Mechanical Fuel Injection'
+    -
+      value: carb
+      label: Carbureted
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

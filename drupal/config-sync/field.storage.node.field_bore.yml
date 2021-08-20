@@ -1,0 +1,20 @@
+uuid: 942a29ed-f7db-4eed-bb5d-5437e4464fb9
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - physical
+id: node.field_bore
+field_name: field_bore
+entity_type: node
+type: physical_measurement
+settings:
+  measurement_type: length
+module: physical
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
