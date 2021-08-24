@@ -30,6 +30,10 @@ export const query = graphql`
         id
         name
       }
+      field_manufacturer {
+        id
+        name
+      }
       field_engine_type {
         id
         name

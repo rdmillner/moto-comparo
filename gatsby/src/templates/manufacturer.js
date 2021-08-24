@@ -44,17 +44,6 @@ export const query = graphql`
      relationships {
        node__motorcycle {
          ...TeaserFragment
-         id
-         title
-         path {
-           alias
-         }
-         relationships {
-           field_manufacturer {
-             id
-             name
-           }
-         }
        }
      }
    }
