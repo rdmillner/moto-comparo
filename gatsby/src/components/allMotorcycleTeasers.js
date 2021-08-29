@@ -7,7 +7,7 @@ import {
   motorcyclename,
   list,
   teaserImage
-} from "../styles/allMotorcycleTeasers.module.scss"
+} from "../styles/teaser.module.scss"
 
 export default function Teaser() {
 
