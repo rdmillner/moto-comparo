@@ -22,7 +22,7 @@ export default function Teaser() {
        {
         edges {
           node {
-            ...TeaserFragment
+            ...TeaserFields
           }
         }
       }

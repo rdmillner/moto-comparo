@@ -1,0 +1,23 @@
+uuid: e9e8cb81-e9f5-49aa-bfc0-f8658575e7e7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_single_sided_swing_arm
+    - node.type.motorcycle
+id: node.motorcycle.field_single_sided_swing_arm
+field_name: field_single_sided_swing_arm
+entity_type: node
+bundle: motorcycle
+label: 'Single Sided Swing Arm'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

@@ -19,7 +19,9 @@ dependencies:
     - field.field.node.motorcycle.field_manufacturer
     - field.field.node.motorcycle.field_model
     - field.field.node.motorcycle.field_rake
+    - field.field.node.motorcycle.field_rear_suspension_type
     - field.field.node.motorcycle.field_seat_height
+    - field.field.node.motorcycle.field_single_sided_swing_arm
     - field.field.node.motorcycle.field_spec_sheet
     - field.field.node.motorcycle.field_stroke
     - field.field.node.motorcycle.field_torque
@@ -163,6 +165,12 @@ content:
     third_party_settings: {  }
     type: number
     region: content
+  field_rear_suspension_type:
+    weight: 32
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_seat_height:
     weight: 16
     settings:
@@ -170,6 +178,13 @@ content:
       allow_unit_change: true
     third_party_settings: {  }
     type: physical_measurement_default
+    region: content
+  field_single_sided_swing_arm:
+    weight: 33
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
     region: content
   field_spec_sheet:
     weight: 19

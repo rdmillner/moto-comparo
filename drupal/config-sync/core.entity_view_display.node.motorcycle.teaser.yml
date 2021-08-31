@@ -20,7 +20,9 @@ dependencies:
     - field.field.node.motorcycle.field_manufacturer
     - field.field.node.motorcycle.field_model
     - field.field.node.motorcycle.field_rake
+    - field.field.node.motorcycle.field_rear_suspension_type
     - field.field.node.motorcycle.field_seat_height
+    - field.field.node.motorcycle.field_single_sided_swing_arm
     - field.field.node.motorcycle.field_spec_sheet
     - field.field.node.motorcycle.field_stroke
     - field.field.node.motorcycle.field_torque
@@ -68,7 +70,9 @@ hidden:
   field_manufacturer: true
   field_model: true
   field_rake: true
+  field_rear_suspension_type: true
   field_seat_height: true
+  field_single_sided_swing_arm: true
   field_spec_sheet: true
   field_stroke: true
   field_torque: true

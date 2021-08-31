@@ -1,7 +1,7 @@
 import { graphql } from "gatsby"
 
 export const query = graphql`
-  fragment TeaserFragment on node__motorcycle {
+  fragment TeaserFields on node__motorcycle {
     title
     id
     path {

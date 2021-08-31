@@ -10,12 +10,7 @@ const Category = ({ data }) => {
 
  return (
    <Layout pageTitle={term.name}>
-     <div className="flexRow">
-         <>
-         <Teaser motorcycles={motorcycles} />
-
-         </>
-     </div>
+    <Teaser motorcycles={motorcycles} />
    </Layout>
  );
 };
@@ -27,7 +22,7 @@ export const query = graphql`
      name
      relationships {
        node__motorcycle {
-         ...TeaserFragment
+         ...TeaserFields
        }
      }
    }

@@ -11,8 +11,7 @@ import {
 export default class Teaser extends React.Component {
   render() {
     return (
-      <>
-      <div>
+      <div className="flexRow">
       {this.props.motorcycles.map((motorcycle) =>
         <Link to={motorcycle.path.alias} className={container} key={motorcycle.id} title={'Learn more about the ' + motorcycle.title + '.'}>
           <h3 className={motorcyclename}>{motorcycle.title}</h3>
@@ -27,10 +26,8 @@ export default class Teaser extends React.Component {
             <li><span>Engine: </span>{JSON.parse(JSON.stringify(motorcycle.relationships.field_engine_type.name))}</li>
           </ul>
         </Link>
-
       )}
       </div>
-      </>
     );
   }
 }

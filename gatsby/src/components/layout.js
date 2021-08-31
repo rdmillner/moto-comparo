@@ -7,10 +7,16 @@ import {
   heading,
   navLinks,
   navLinkItem,
-  navLinkText,
   siteTitle,
   footer,
 } from "../styles/layout.module.scss"
+
+const navbaritems = [
+  { text: "Home", target: "/" },
+  { text: "Manufacturers", target: "/manufacturers" },
+  { text: "Categories", target: "/categories" },
+  { text: "About", target: "/about" }
+]
 
 const Layout = ({ pageTitle, children }) => {
   const data = useStaticQuery(graphql`
@@ -23,6 +29,7 @@ const Layout = ({ pageTitle, children }) => {
     }
   `)
 
+
   return (
     <>
     <Helmet>
@@ -30,29 +37,14 @@ const Layout = ({ pageTitle, children }) => {
     </Helmet>
     <main className={container}>
     <nav className="navbar navbar-expand-lg sticky-top justify-content-center">
-      <p className={[siteTitle, "navbar-brand"]}>{data.site.siteMetadata.title}</p>
-      <ul className={navLinks}>
-        <li className={navLinkItem}>
-          <Link to="/" className={navLinkText}>
-            Home
+    <Link to="/" className={[siteTitle + " navbar-brand"]}>{data.site.siteMetadata.title}</Link>
+      <div className={["navbar-nav " + navLinks]}>
+        {navbaritems.map((item, index) => (
+          <Link to={item.target} className={["nav-link " + navLinkItem]} key={index}>
+            {item.text}
           </Link>
-        </li>
-        <li className={navLinkItem}>
-          <Link to="/manufacturers" className={navLinkText}>
-            Manufacturers
-          </Link>
-        </li>
-        <li className={navLinkItem}>
-          <Link to="/categories" className={navLinkText}>
-            Categories
-          </Link>
-        </li>
-        <li className={navLinkItem}>
-          <Link to="/about" className={navLinkText}>
-            About
-          </Link>
-        </li>
-      </ul>
+        ))}
+      </div>
     </nav>
 
       <h1 className={heading}>{pageTitle}</h1>

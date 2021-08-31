@@ -1,0 +1,23 @@
+uuid: c5cba02f-163b-4487-824e-28a2c1c2638a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_rear_suspension_type
+    - node.type.motorcycle
+  module:
+    - options
+id: node.motorcycle.field_rear_suspension_type
+field_name: field_rear_suspension_type
+entity_type: node
+bundle: motorcycle
+label: 'Rear Suspension Type'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: dualshocks
+default_value_callback: ''
+settings: {  }
+field_type: list_string
