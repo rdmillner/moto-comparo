@@ -6,7 +6,7 @@ import AllMotorcycleTeasers from "../components/allMotorcycleTeasers"
 const IndexPage = ({ data }) => {
 
   return (
-    <Layout pageTitle="Home">
+    <Layout pageTitle="All Motorcycles">
       <p>There are <strong>{data.allNodeMotorcycle.totalCount}</strong> motorcycles in the database.</p>
       <AllMotorcycleTeasers />
     </Layout>

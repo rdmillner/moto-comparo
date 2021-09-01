@@ -4,8 +4,15 @@
   max-width: 900px;
   font-family: Helvetica, sans-serif;
 }
-.heading {
-  color: rebeccapurple;
+.site-title {
+  font-size: 1.5rem;
+  color: black;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 0;
+}
+.navbar {
+  color: red;
 }
 .nav-links {
   display: flex;
@@ -19,12 +26,10 @@
 .nav-link-text {
   color: black;
 }
-.site-title {
-  font-size: 3rem;
-  color: black;
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 0;
+.pageHeading {
+}
+.content {
+  padding: 5px 10px;
 }
 .footer {
   margin-top: 25px;
