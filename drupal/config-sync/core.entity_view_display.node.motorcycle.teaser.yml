@@ -8,29 +8,42 @@ dependencies:
     - field.field.node.motorcycle.field_abs
     - field.field.node.motorcycle.field_bore
     - field.field.node.motorcycle.field_category
+    - field.field.node.motorcycle.field_colors
+    - field.field.node.motorcycle.field_cylinders
     - field.field.node.motorcycle.field_displacement
     - field.field.node.motorcycle.field_engine_cooling
     - field.field.node.motorcycle.field_engine_type
+    - field.field.node.motorcycle.field_f
     - field.field.node.motorcycle.field_final_drive
+    - field.field.node.motorcycle.field_front_brake_size
+    - field.field.node.motorcycle.field_front_brake_type
+    - field.field.node.motorcycle.field_front_suspension_type
     - field.field.node.motorcycle.field_fuel_capacity
     - field.field.node.motorcycle.field_fuelling
     - field.field.node.motorcycle.field_gears
+    - field.field.node.motorcycle.field_height
     - field.field.node.motorcycle.field_horsepower
     - field.field.node.motorcycle.field_images
+    - field.field.node.motorcycle.field_length
     - field.field.node.motorcycle.field_manufacturer
     - field.field.node.motorcycle.field_model
     - field.field.node.motorcycle.field_rake
+    - field.field.node.motorcycle.field_rear_brake_size
+    - field.field.node.motorcycle.field_rear_brake_type
     - field.field.node.motorcycle.field_rear_suspension_type
+    - field.field.node.motorcycle.field_rear_tire
     - field.field.node.motorcycle.field_seat_height
     - field.field.node.motorcycle.field_single_sided_swing_arm
     - field.field.node.motorcycle.field_spec_sheet
     - field.field.node.motorcycle.field_stroke
     - field.field.node.motorcycle.field_torque
     - field.field.node.motorcycle.field_trail
+    - field.field.node.motorcycle.field_transmission_type
     - field.field.node.motorcycle.field_type
     - field.field.node.motorcycle.field_weight
     - field.field.node.motorcycle.field_weight_type
     - field.field.node.motorcycle.field_wheelbase
+    - field.field.node.motorcycle.field_width
     - field.field.node.motorcycle.field_year
     - node.type.motorcycle
   module:
@@ -58,27 +71,40 @@ hidden:
   field_abs: true
   field_bore: true
   field_category: true
+  field_colors: true
+  field_cylinders: true
   field_displacement: true
   field_engine_cooling: true
   field_engine_type: true
+  field_f: true
   field_final_drive: true
+  field_front_brake_size: true
+  field_front_brake_type: true
+  field_front_suspension_type: true
   field_fuel_capacity: true
   field_fuelling: true
   field_gears: true
+  field_height: true
   field_horsepower: true
   field_images: true
+  field_length: true
   field_manufacturer: true
   field_model: true
   field_rake: true
+  field_rear_brake_size: true
+  field_rear_brake_type: true
   field_rear_suspension_type: true
+  field_rear_tire: true
   field_seat_height: true
   field_single_sided_swing_arm: true
   field_spec_sheet: true
   field_stroke: true
   field_torque: true
   field_trail: true
+  field_transmission_type: true
   field_type: true
   field_weight: true
   field_weight_type: true
   field_wheelbase: true
+  field_width: true
   field_year: true

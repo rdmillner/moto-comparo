@@ -7,29 +7,42 @@ dependencies:
     - field.field.node.motorcycle.field_abs
     - field.field.node.motorcycle.field_bore
     - field.field.node.motorcycle.field_category
+    - field.field.node.motorcycle.field_colors
+    - field.field.node.motorcycle.field_cylinders
     - field.field.node.motorcycle.field_displacement
     - field.field.node.motorcycle.field_engine_cooling
     - field.field.node.motorcycle.field_engine_type
+    - field.field.node.motorcycle.field_f
     - field.field.node.motorcycle.field_final_drive
+    - field.field.node.motorcycle.field_front_brake_size
+    - field.field.node.motorcycle.field_front_brake_type
+    - field.field.node.motorcycle.field_front_suspension_type
     - field.field.node.motorcycle.field_fuel_capacity
     - field.field.node.motorcycle.field_fuelling
     - field.field.node.motorcycle.field_gears
+    - field.field.node.motorcycle.field_height
     - field.field.node.motorcycle.field_horsepower
     - field.field.node.motorcycle.field_images
+    - field.field.node.motorcycle.field_length
     - field.field.node.motorcycle.field_manufacturer
     - field.field.node.motorcycle.field_model
     - field.field.node.motorcycle.field_rake
+    - field.field.node.motorcycle.field_rear_brake_size
+    - field.field.node.motorcycle.field_rear_brake_type
     - field.field.node.motorcycle.field_rear_suspension_type
+    - field.field.node.motorcycle.field_rear_tire
     - field.field.node.motorcycle.field_seat_height
     - field.field.node.motorcycle.field_single_sided_swing_arm
     - field.field.node.motorcycle.field_spec_sheet
     - field.field.node.motorcycle.field_stroke
     - field.field.node.motorcycle.field_torque
     - field.field.node.motorcycle.field_trail
+    - field.field.node.motorcycle.field_transmission_type
     - field.field.node.motorcycle.field_type
     - field.field.node.motorcycle.field_weight
     - field.field.node.motorcycle.field_weight_type
     - field.field.node.motorcycle.field_wheelbase
+    - field.field.node.motorcycle.field_width
     - field.field.node.motorcycle.field_year
     - node.type.motorcycle
   module:
@@ -49,20 +62,59 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_abs:
-    weight: 14
+    weight: 33
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_bore:
-    weight: 26
+    weight: 24
     settings:
-      default_unit: ''
+      default_unit: mm
       allow_unit_change: true
     third_party_settings: {  }
     type: physical_measurement_default
     region: content
   field_category:
+    weight: 14
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_colors:
+    weight: 44
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_cylinders:
+    weight: 18
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_displacement:
+    weight: 11
+    settings:
+      default_unit: cc
+      allow_unit_change: true
+    third_party_settings: {  }
+    type: physical_measurement_default
+    region: content
+  field_engine_cooling:
+    weight: 19
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_engine_type:
     weight: 17
     settings:
       match_operator: CONTAINS
@@ -72,22 +124,8 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
-  field_displacement:
-    weight: 13
-    settings:
-      default_unit: ''
-      allow_unit_change: true
-    third_party_settings: {  }
-    type: physical_measurement_default
-    region: content
-  field_engine_cooling:
-    weight: 21
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
-  field_engine_type:
-    weight: 18
+  field_f:
+    weight: 38
     settings:
       match_operator: CONTAINS
       match_limit: 10
@@ -97,49 +135,85 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_final_drive:
-    weight: 20
+    weight: 16
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_front_brake_size:
+    weight: 35
+    settings:
+      default_unit: mm
+      allow_unit_change: true
+    third_party_settings: {  }
+    type: physical_measurement_default
+    region: content
+  field_front_brake_type:
+    weight: 34
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_front_suspension_type:
+    weight: 30
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_fuel_capacity:
-    weight: 24
+    weight: 22
     settings:
-      default_unit: ''
+      default_unit: gal
       allow_unit_change: true
     third_party_settings: {  }
     type: physical_measurement_default
     region: content
   field_fuelling:
-    weight: 25
+    weight: 23
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_gears:
-    weight: 22
+    weight: 20
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
-  field_horsepower:
-    weight: 29
+  field_height:
+    weight: 42
     settings:
-      default_unit: ''
+      default_unit: in
+      allow_unit_change: true
+    third_party_settings: {  }
+    type: physical_measurement_default
+    region: content
+  field_horsepower:
+    weight: 27
+    settings:
+      default_unit: hp
       allow_unit_change: true
     third_party_settings: {  }
     type: physical_measurement_default
     region: content
   field_images:
-    weight: 15
+    weight: 12
     settings:
       progress_indicator: throbber
       preview_image_style: ''
     third_party_settings: {  }
     type: image_image
     region: content
+  field_length:
+    weight: 40
+    settings:
+      default_unit: in
+      allow_unit_change: true
+    third_party_settings: {  }
+    type: physical_measurement_default
+    region: content
   field_manufacturer:
-    weight: 8
+    weight: 6
     settings:
       match_operator: CONTAINS
       match_limit: 10
@@ -149,7 +223,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_model:
-    weight: 10
+    weight: 8
     settings:
       match_operator: CONTAINS
       match_limit: 10
@@ -159,20 +233,44 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_rake:
-    weight: 30
+    weight: 28
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: number
     region: content
-  field_rear_suspension_type:
-    weight: 32
+  field_rear_brake_size:
+    weight: 37
+    settings:
+      default_unit: mm
+      allow_unit_change: true
+    third_party_settings: {  }
+    type: physical_measurement_default
+    region: content
+  field_rear_brake_type:
+    weight: 36
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
+  field_rear_suspension_type:
+    weight: 31
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_rear_tire:
+    weight: 39
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   field_seat_height:
-    weight: 16
+    weight: 13
     settings:
       default_unit: ''
       allow_unit_change: true
@@ -180,51 +278,57 @@ content:
     type: physical_measurement_default
     region: content
   field_single_sided_swing_arm:
-    weight: 33
+    weight: 32
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
   field_spec_sheet:
-    weight: 19
+    weight: 15
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
     type: file_generic
     region: content
   field_stroke:
-    weight: 27
+    weight: 25
     settings:
-      default_unit: ''
+      default_unit: mm
       allow_unit_change: true
     third_party_settings: {  }
     type: physical_measurement_default
     region: content
   field_torque:
-    weight: 28
+    weight: 26
     settings:
-      default_unit: ''
+      default_unit: ft-lb
       allow_unit_change: true
     third_party_settings: {  }
     type: physical_measurement_default
     region: content
   field_trail:
-    weight: 31
+    weight: 29
     settings:
-      default_unit: ''
+      default_unit: mm
       allow_unit_change: true
     third_party_settings: {  }
     type: physical_measurement_default
     region: content
+  field_transmission_type:
+    weight: 43
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_type:
-    weight: 7
+    weight: 5
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_weight:
-    weight: 12
+    weight: 10
     settings:
       default_unit: ''
       allow_unit_change: true
@@ -232,21 +336,29 @@ content:
     type: physical_measurement_default
     region: content
   field_weight_type:
-    weight: 11
+    weight: 9
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_wheelbase:
-    weight: 23
+    weight: 21
     settings:
-      default_unit: ''
+      default_unit: mm
+      allow_unit_change: true
+    third_party_settings: {  }
+    type: physical_measurement_default
+    region: content
+  field_width:
+    weight: 41
+    settings:
+      default_unit: in
       allow_unit_change: true
     third_party_settings: {  }
     type: physical_measurement_default
     region: content
   field_year:
-    weight: 9
+    weight: 7
     settings:
       placeholder: ''
     third_party_settings: {  }
@@ -254,25 +366,11 @@ content:
     region: content
   path:
     type: path
-    weight: 5
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
-  promote:
-    type: boolean_checkbox
-    settings:
-      display_label: true
-    weight: 3
-    region: content
-    third_party_settings: {  }
   status:
-    type: boolean_checkbox
-    settings:
-      display_label: true
-    weight: 6
-    region: content
-    third_party_settings: {  }
-  sticky:
     type: boolean_checkbox
     settings:
       display_label: true
@@ -299,3 +397,5 @@ content:
     third_party_settings: {  }
 hidden:
   body: true
+  promote: true
+  sticky: true

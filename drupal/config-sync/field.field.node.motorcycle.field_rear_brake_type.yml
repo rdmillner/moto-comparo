@@ -1,23 +1,23 @@
-uuid: 0499e35b-7eef-40c9-a76a-949078ad0506
+uuid: b5eb95df-1ae5-4e9b-bc76-d6e50d5b9024
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_engine_cooling
+    - field.storage.node.field_rear_brake_type
     - node.type.motorcycle
   module:
     - options
-id: node.motorcycle.field_engine_cooling
-field_name: field_engine_cooling
+id: node.motorcycle.field_rear_brake_type
+field_name: field_rear_brake_type
 entity_type: node
 bundle: motorcycle
-label: 'Engine Cooling'
+label: 'Rear Brake Type'
 description: ''
 required: true
 translatable: false
 default_value:
   -
-    value: liquid
+    value: single
 default_value_callback: ''
 settings: {  }
 field_type: list_string

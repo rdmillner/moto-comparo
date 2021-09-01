@@ -1,0 +1,20 @@
+uuid: d6dfaec5-60a7-4bac-8e46-ec3b565a7ee2
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - physical
+id: node.field_height
+field_name: field_height
+entity_type: node
+type: physical_measurement
+settings:
+  measurement_type: length
+module: physical
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,8 @@
+uuid: c1692d49-4c55-4d93-bf74-cf198d767bf0
+langcode: en
+status: true
+dependencies: {  }
+name: 'Factory Tire Sizes'
+vid: factory_tire_sizes
+description: 'Lists tire sizes, used for front and rear tire fields.'
+weight: 0

@@ -1,0 +1,21 @@
+uuid: 46d439d4-229b-46a0-9f94-d5282e0191de
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_rear_brake_size
+    - node.type.motorcycle
+  module:
+    - physical
+id: node.motorcycle.field_rear_brake_size
+field_name: field_rear_brake_size
+entity_type: node
+bundle: motorcycle
+label: 'Rear Brake Size'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: physical_measurement

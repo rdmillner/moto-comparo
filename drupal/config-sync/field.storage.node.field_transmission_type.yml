@@ -1,25 +1,25 @@
-uuid: 67760bf5-8b4a-447b-a225-dc281c99061e
+uuid: 404f7242-293f-435e-b779-07ea3eb1c2db
 langcode: en
 status: true
 dependencies:
   module:
     - node
     - options
-id: node.field_engine_cooling
-field_name: field_engine_cooling
+id: node.field_transmission_type
+field_name: field_transmission_type
 entity_type: node
 type: list_string
 settings:
   allowed_values:
     -
-      value: air
-      label: 'Air Cooled'
+      value: manual
+      label: manual
     -
-      value: airoil
-      label: 'Air/Oil Cooled'
+      value: dct
+      label: 'dual clutch'
     -
-      value: liquid
-      label: 'Liquid Cooled'
+      value: auto
+      label: automatic
   allowed_values_function: ''
 module: options
 locked: false

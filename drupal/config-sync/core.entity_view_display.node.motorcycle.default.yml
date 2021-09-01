@@ -7,29 +7,42 @@ dependencies:
     - field.field.node.motorcycle.field_abs
     - field.field.node.motorcycle.field_bore
     - field.field.node.motorcycle.field_category
+    - field.field.node.motorcycle.field_colors
+    - field.field.node.motorcycle.field_cylinders
     - field.field.node.motorcycle.field_displacement
     - field.field.node.motorcycle.field_engine_cooling
     - field.field.node.motorcycle.field_engine_type
+    - field.field.node.motorcycle.field_f
     - field.field.node.motorcycle.field_final_drive
+    - field.field.node.motorcycle.field_front_brake_size
+    - field.field.node.motorcycle.field_front_brake_type
+    - field.field.node.motorcycle.field_front_suspension_type
     - field.field.node.motorcycle.field_fuel_capacity
     - field.field.node.motorcycle.field_fuelling
     - field.field.node.motorcycle.field_gears
+    - field.field.node.motorcycle.field_height
     - field.field.node.motorcycle.field_horsepower
     - field.field.node.motorcycle.field_images
+    - field.field.node.motorcycle.field_length
     - field.field.node.motorcycle.field_manufacturer
     - field.field.node.motorcycle.field_model
     - field.field.node.motorcycle.field_rake
+    - field.field.node.motorcycle.field_rear_brake_size
+    - field.field.node.motorcycle.field_rear_brake_type
     - field.field.node.motorcycle.field_rear_suspension_type
+    - field.field.node.motorcycle.field_rear_tire
     - field.field.node.motorcycle.field_seat_height
     - field.field.node.motorcycle.field_single_sided_swing_arm
     - field.field.node.motorcycle.field_spec_sheet
     - field.field.node.motorcycle.field_stroke
     - field.field.node.motorcycle.field_torque
     - field.field.node.motorcycle.field_trail
+    - field.field.node.motorcycle.field_transmission_type
     - field.field.node.motorcycle.field_type
     - field.field.node.motorcycle.field_weight
     - field.field.node.motorcycle.field_weight_type
     - field.field.node.motorcycle.field_wheelbase
+    - field.field.node.motorcycle.field_width
     - field.field.node.motorcycle.field_year
     - node.type.motorcycle
   module:
@@ -73,6 +86,23 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: content
+  field_colors:
+    weight: 142
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_cylinders:
+    weight: 130
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
   field_displacement:
     weight: 108
     label: above
@@ -95,8 +125,37 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: content
+  field_f:
+    weight: 136
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
   field_final_drive:
     weight: 115
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_front_brake_size:
+    weight: 134
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: physical_measurement_default
+    region: content
+  field_front_brake_type:
+    weight: 132
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_front_suspension_type:
+    weight: 131
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -123,6 +182,13 @@ content:
     third_party_settings: {  }
     type: list_default
     region: content
+  field_height:
+    weight: 140
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: physical_measurement_default
+    region: content
   field_horsepower:
     weight: 125
     label: above
@@ -138,6 +204,13 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: image
+    region: content
+  field_length:
+    weight: 138
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: physical_measurement_default
     region: content
   field_manufacturer:
     weight: 103
@@ -166,12 +239,34 @@ content:
     third_party_settings: {  }
     type: number_decimal
     region: content
+  field_rear_brake_size:
+    weight: 135
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: physical_measurement_default
+    region: content
+  field_rear_brake_type:
+    weight: 133
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
   field_rear_suspension_type:
     weight: 128
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
+    region: content
+  field_rear_tire:
+    weight: 137
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
     region: content
   field_seat_height:
     weight: 111
@@ -219,6 +314,13 @@ content:
     third_party_settings: {  }
     type: physical_measurement_default
     region: content
+  field_transmission_type:
+    weight: 141
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
   field_type:
     weight: 120
     label: above
@@ -242,6 +344,13 @@ content:
     region: content
   field_wheelbase:
     weight: 118
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: physical_measurement_default
+    region: content
+  field_width:
+    weight: 139
     label: above
     settings: {  }
     third_party_settings: {  }

@@ -1,0 +1,23 @@
+uuid: 9643d7f6-485e-4ab9-85db-2f88db7b1521
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cylinders
+    - node.type.motorcycle
+id: node.motorcycle.field_cylinders
+field_name: field_cylinders
+entity_type: node
+bundle: motorcycle
+label: Cylinders
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

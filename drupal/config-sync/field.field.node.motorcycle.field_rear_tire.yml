@@ -1,0 +1,29 @@
+uuid: c36f9b02-7f8f-49c9-8350-48ac4ea6a397
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_rear_tire
+    - node.type.motorcycle
+    - taxonomy.vocabulary.factory_tire_sizes
+id: node.motorcycle.field_rear_tire
+field_name: field_rear_tire
+entity_type: node
+bundle: motorcycle
+label: 'Rear Tire'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      factory_tire_sizes: factory_tire_sizes
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

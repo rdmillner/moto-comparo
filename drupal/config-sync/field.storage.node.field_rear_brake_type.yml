@@ -1,25 +1,22 @@
-uuid: 67760bf5-8b4a-447b-a225-dc281c99061e
+uuid: 357f6321-7de1-44f8-b106-98ace71e8906
 langcode: en
 status: true
 dependencies:
   module:
     - node
     - options
-id: node.field_engine_cooling
-field_name: field_engine_cooling
+id: node.field_rear_brake_type
+field_name: field_rear_brake_type
 entity_type: node
 type: list_string
 settings:
   allowed_values:
     -
-      value: air
-      label: 'Air Cooled'
+      value: single
+      label: 'Single Disc'
     -
-      value: airoil
-      label: 'Air/Oil Cooled'
-    -
-      value: liquid
-      label: 'Liquid Cooled'
+      value: drum
+      label: 'Drum Brake'
   allowed_values_function: ''
 module: options
 locked: false

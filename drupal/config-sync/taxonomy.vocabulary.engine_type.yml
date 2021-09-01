@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 name: 'Engine Type'
 vid: engine_type
-description: ''
+description: 'List of different types of motorcycle engines.'
 weight: 0

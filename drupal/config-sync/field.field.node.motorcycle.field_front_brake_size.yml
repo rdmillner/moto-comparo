@@ -1,0 +1,21 @@
+uuid: ccec867e-218f-455f-87a3-770626a1771a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_front_brake_size
+    - node.type.motorcycle
+  module:
+    - physical
+id: node.motorcycle.field_front_brake_size
+field_name: field_front_brake_size
+entity_type: node
+bundle: motorcycle
+label: 'Front Brake Size'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: physical_measurement

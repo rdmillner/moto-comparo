@@ -1,23 +1,23 @@
-uuid: 0499e35b-7eef-40c9-a76a-949078ad0506
+uuid: 5af9f9bc-dd94-49bd-b1c3-0711eb42e992
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_engine_cooling
+    - field.storage.node.field_transmission_type
     - node.type.motorcycle
   module:
     - options
-id: node.motorcycle.field_engine_cooling
-field_name: field_engine_cooling
+id: node.motorcycle.field_transmission_type
+field_name: field_transmission_type
 entity_type: node
 bundle: motorcycle
-label: 'Engine Cooling'
+label: 'Transmission Type'
 description: ''
 required: true
 translatable: false
 default_value:
   -
-    value: liquid
+    value: manual
 default_value_callback: ''
 settings: {  }
 field_type: list_string

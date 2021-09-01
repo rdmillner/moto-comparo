@@ -1,0 +1,29 @@
+uuid: f21da0c8-efcc-412e-b4a5-46016c43f16e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_f
+    - node.type.motorcycle
+    - taxonomy.vocabulary.factory_tire_sizes
+id: node.motorcycle.field_f
+field_name: field_f
+entity_type: node
+bundle: motorcycle
+label: 'Front Tire'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      factory_tire_sizes: factory_tire_sizes
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference
