@@ -1,19 +1,23 @@
 /* scss file for the MotorcycleTeaser component */
+
+$border-color: #eee;
+
 .container {
-  margin: 2px 3px;
-/*  border: 1px solid grey; */
+  margin: 10px 3px 2px;
   padding: 0 5px;
+  border: 1px solid $border-color;
+  text-align: center;
+  position: relative;
 }
 .motorcyclename {
   margin-bottom: 0;
-  text-align: center;
+  padding-top: 8px;
 }
 .list {
   font-size: .8em;
   list-style: none;
   margin-top: 0;
   padding-left: 0;
-  text-align: center;
   column-count: 2;
 }
 li span {
@@ -24,4 +28,11 @@ li span {
 .teaserImage {
   display: table;
   margin: auto;
+}
+.category {
+  background-color: white;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-size: .8em;
+  padding: 0 3px;
 }

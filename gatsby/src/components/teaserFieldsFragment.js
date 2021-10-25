@@ -42,7 +42,7 @@ export const query = graphql`
         localFile {
           childrenImageSharp {
             id
-            gatsbyImageData(height: 100, formats: [AVIF, WEBP, AUTO], placeholder: TRACED_SVG)
+            gatsbyImageData(height: 100, formats: [AUTO, WEBP, AVIF ], placeholder: TRACED_SVG)
           }
         }
       }

@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet"
 import "../styles/globalStyles.scss"
 import {
   container,
-  pageHeading,
+  pageHeader,
   content,
   navLinks,
   navLinkItem,
@@ -54,7 +54,7 @@ const Layout = ({ pageTitle, children }) => {
     </nav>
     <main className={container}>
 
-      <h1 className={pageHeading}>{pageTitle}</h1>
+      <h1 className={pageHeader}>{pageTitle}</h1>
       <div className={content}>
         {children}
       </div>

@@ -21,7 +21,7 @@
 a {
   text-decoration: none;
   color: black;
-  &:visited {
+  &:visited, &:hover {
     color: inherit;
   }
 }
@@ -29,4 +29,27 @@ a {
   background-color: white;
   margin-bottom: 5px;
   border-bottom: 2px solid #000;
+}
+
+$border-color: #eee;
+$brandColors: (
+  "honda": #df1b21,
+  "yamaha": #039,
+  "kawasaki": #66cc13,
+  "ktm": #f60,
+  "suzuki": #03f
+  );
+.teaser {
+  border-color: $border-color;
+  .category {
+    color: darken($border-color, 30%);
+  }
+}
+@each $brand, $color in $brandColors {
+  .teaser.#{$brand} {
+    border-color: $color !important;
+    h3, .category {
+      color: $color !important;
+    }
+  }
 }

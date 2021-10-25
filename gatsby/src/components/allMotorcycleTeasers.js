@@ -2,12 +2,7 @@ import * as React from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
-import {
-  container,
-  motorcyclename,
-  list,
-  teaserImage
-} from "../styles/teaser.module.scss"
+import * as containerStyles from "../styles/teaser.module.scss"
 
 export default function Teaser() {
 
@@ -32,11 +27,12 @@ export default function Teaser() {
   return (
     <div className="flexRow">
       {data.allNodeMotorcycle.edges.map(({ node }) => (
-        <Link to={node.path.alias} className={container} key={node.id} title={'Learn more about the ' + node.title + '.'}>
-          <h3 className={motorcyclename}>{node.title}</h3>
-          <GatsbyImage image={getImage(node.relationships.field_images['0'].localFile.childrenImageSharp['0'])} alt={node.field_images['0'].alt} className={teaserImage} />
+        <Link to={node.path.alias} className={[containerStyles.container + " teaser " + node.relationships.field_manufacturer.name.toLowerCase()]} key={node.id} title={'Learn more about the ' + node.title + '.'}>
+          <span className={containerStyles.category + " category"}>{JSON.parse(JSON.stringify(node.relationships.field_category['0'].name))}</span>
+          <h3 className={containerStyles.motorcyclename}>{node.title}</h3>
+          <GatsbyImage image={getImage(node.relationships.field_images['0'].localFile.childrenImageSharp['0'])} alt={node.field_images['0'].alt} className={containerStyles.teaserImage} />
           {node.field_images.alt}
-          <ul className={list}>
+          <ul className={containerStyles.list}>
             <li><span>Displacement: </span>{Math.trunc(node.field_displacement.number)}{node.field_displacement.unit}</li>
             <li><span>Weight: </span>{Math.trunc(node.field_weight.number)}{node.field_weight.unit} ({node.field_weight_type})</li>
             <li><span>Seat Height: </span>{Math.trunc(node.field_seat_height.number)}{node.field_seat_height.unit}</li>
