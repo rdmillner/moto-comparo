@@ -42,7 +42,7 @@ exports.createPages = async ({ actions, graphql }) => {
 		result.data.motorcycleData.edges.forEach(({ node }) => {
 			createPage({
 				path: node.path.alias,
-				component: path.resolve(`src/templates/motorcycle.js`),
+				component: path.resolve('src/templates/motorcycle.js'),
         context: {
           MotorcycleId: node.id,
         },
@@ -52,7 +52,7 @@ exports.createPages = async ({ actions, graphql }) => {
 		result.data.manufacturerData.edges.forEach(({ node }) => {
 			createPage({
 				path: node.name.toLowerCase(),
-				component: path.resolve(`src/templates/manufacturer.js`),
+				component: path.resolve('src/templates/manufacturer.js'),
         context: {
           ManufacturerId: node.id,
           ManufacturerName: node.name,
@@ -63,7 +63,7 @@ exports.createPages = async ({ actions, graphql }) => {
 		result.data.categoryData.edges.forEach(({ node }) => {
 			createPage({
 				path: node.name.toLowerCase(),
-				component: path.resolve(`src/templates/category.js`),
+				component: path.resolve('src/templates/category.js'),
         context: {
           CategoryId: node.id,
           CategoryName: node.name,

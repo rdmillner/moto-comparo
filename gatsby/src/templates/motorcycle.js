@@ -15,7 +15,7 @@ const Motorcycle = ({ data }) => {
       </Link>
     </nav>
      <GatsbyImage image={getImage(post.relationships.field_images['0'].localFile.childrenImageSharp['0'])} alt={post.field_images['0'].alt} />
-     <ul>
+     <ul className="plainList">
        <li><strong>Displacement: </strong>{Math.trunc(post.field_displacement.number)}{post.field_displacement.unit}</li>
        <li><strong>Weight: </strong>{Math.trunc(post.field_weight.number)}{post.field_weight.unit} ({post.field_weight_type})</li>
        <li><strong>ABS: </strong>{post.field_abs}</li>
