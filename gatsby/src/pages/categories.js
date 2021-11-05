@@ -8,7 +8,7 @@ const MakesPage = ({ data }) => {
     <Layout pageTitle="Categories">
       <div className="flexRow spacearound">
         {data.allTaxonomyTermCategory.edges.map(({ node }) => (
-          <Link to={"/" + node.name.toLowerCase()} key={node.id}>
+          <Link to={"/" + node.name.toLowerCase()} key={node.id} title={"All " + node.name.toLowerCase() + " motorcycles."}>
             {node.name}
           </Link>
         ))}
